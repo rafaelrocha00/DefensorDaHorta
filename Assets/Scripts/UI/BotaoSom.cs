@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ButaoSom : MonoBehaviour
+public class BotaoSom : MonoBehaviour
 {
     [SerializeField] AudioClip clip;
     private void Start()

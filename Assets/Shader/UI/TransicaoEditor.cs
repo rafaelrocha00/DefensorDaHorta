@@ -7,6 +7,7 @@ using System;
 public class TransicaoEditor : MonoBehaviour
 {
     public Material material;
+    [SerializeField] float tempoDisponivelParaTransicao = 1f;
 
     void OnRenderImage(RenderTexture source, RenderTexture destination)
     {
@@ -31,14 +32,15 @@ public class TransicaoEditor : MonoBehaviour
 
     IEnumerator TransicaoFadeIN(GameObject FadeINTOObject, Action FuncaoPosTransicao)
     {
-        float contador = 0.5f;
+        float contador = 0f;
         float contadorTempo = 0;
-        while (contador < 1)
+
+        while (contador < tempoDisponivelParaTransicao)
         {
-            contadorTempo += 1.5f * Time.deltaTime;
-            contador = Mathf.Lerp(0.5f, 1.3f, contadorTempo);
+            contadorTempo += 1f * Time.deltaTime;
+            contador = Mathf.Lerp(0f, tempoDisponivelParaTransicao, contadorTempo);
             material.SetFloat("_CutOff", contador);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForEndOfFrame();
         }
         FadeINTOObject.gameObject.SetActive(true);
         material.SetFloat("_CutOff", 0f);
@@ -48,15 +50,15 @@ public class TransicaoEditor : MonoBehaviour
     IEnumerator TransicaoFadeOUT()
     {
         material.SetFloat("_CutOff", 1f);
-        float contador = 1;
+        float contador = tempoDisponivelParaTransicao;
         float contadorTempo = 0;
 
         while(contador > 0)
         {
-            contadorTempo += 1.5f * Time.deltaTime;
-            contador = Mathf.Lerp(1.5f, -0.5f, contadorTempo);
+            contadorTempo += 1f * Time.deltaTime;
+            contador = Mathf.Lerp(tempoDisponivelParaTransicao, 0f, contadorTempo);
             material.SetFloat("_CutOff", contador);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForEndOfFrame();
         }
         material.SetFloat("_CutOff", 0f);
     }

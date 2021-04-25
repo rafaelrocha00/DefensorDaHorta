@@ -53,8 +53,4 @@ public class Torre_Objeto : MonoBehaviour, Iinteragivel
         }
     }
 
-    public void PlaySomDeConstrucao()
-    {
-
-    }
 }

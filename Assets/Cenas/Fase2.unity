@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18353297, g: 0.22907579, b: 0.30564272, a: 1}
+  m_IndirectSpecularColor: {r: 0.18353334, g: 0.22907653, b: 0.30564395, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3317,7 +3317,7 @@ PrefabInstance:
     - target: {fileID: 7492514868034637586, guid: 80b5c9231f0fd1b4a8571fc84b4949c7,
         type: 3}
       propertyPath: cena
-      value: Fase2
+      value: Fase3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80b5c9231f0fd1b4a8571fc84b4949c7, type: 3}
@@ -13683,6 +13683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: ea9f1177fba2fcd4990af1d1b5c5c5e4, type: 2}
+  tempoDisponivelParaTransicao: 1
 --- !u!114 &1757444323
 MonoBehaviour:
   m_ObjectHideFlags: 0

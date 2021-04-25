@@ -16,7 +16,6 @@ public class BotaoDestruir : MonoBehaviour
     public void Destruir()
     {
         Destroy(gameObject);
-        Debug.Log("Metodo não funciona");
     }
 
 }
