@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 635753cf539d00e4e98dea7ba19ff7c6, type: 3}
+  m_Name: GhostBoss
+  m_EditorClassIdentifier: 
+  velocidade: 1
+  vidaTotal: 700
+  dano: 19
+  dinheiroGanho: 500
+  inimigo: {fileID: 6612513664349302859, guid: c435b8c049a0d9b4ba7a8c62d0595b5f, type: 3}
