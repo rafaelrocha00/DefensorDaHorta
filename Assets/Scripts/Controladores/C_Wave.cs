@@ -6,7 +6,6 @@ using System;
 public class C_Wave : MonoBehaviour
 {
     public List<Wave> Waves;
-    bool WaveComecou = false;
     int IndexWaveAtual = 0;
     int IndexInimigoAtual = 0;
     public Waypoint WaypointInicial;
@@ -38,7 +37,6 @@ public class C_Wave : MonoBehaviour
     public void IniciarWaves()
     {
         StartCoroutine(ProcessarWave());
-        WaveComecou = true;
     }
 
     IEnumerator ProcessarWave()
