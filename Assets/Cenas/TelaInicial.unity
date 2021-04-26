@@ -963,6 +963,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: ea9f1177fba2fcd4990af1d1b5c5c5e4, type: 2}
+  tempoDisponivelParaTransicao: 1
 --- !u!1 &216555211
 GameObject:
   m_ObjectHideFlags: 0
