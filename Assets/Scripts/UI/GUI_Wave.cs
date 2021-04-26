@@ -17,14 +17,23 @@ public class GUI_Wave : MonoBehaviour
     private void Start()
     {
         wave = GetComponent<C_Wave>();
-        wave.Venceu += MostrarPainelVenceu;
+        if(wave != null)
+        {
+            wave.Venceu += MostrarPainelVenceu;
+            wave.WaveMudou += AtualizarPainelWave;
+            AtualizarPainelWave();
+
+        }
+        else
+        {
+            TextoWave.text = "?";
+        }
+
         C_Fase.instancia.Perdeu += MostrarPainelPerdeu;
         C_Fase.instancia.DinheiroMudou += AtualizarPainelDinheiro;
         C_Fase.instancia.VidaMudou += AtualizarPainelVida;
-        wave.WaveMudou += AtualizarPainelWave;
         AtualizarPainelDinheiro();
         AtualizarPainelVida();
-        AtualizarPainelWave();
     }
 
 

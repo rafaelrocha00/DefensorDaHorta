@@ -5235,7 +5235,7 @@ GameObject:
   - component: {fileID: 841018949}
   m_Layer: 0
   m_Name: Parede
-  m_TagString: Untagged
+  m_TagString: Chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11095,7 +11095,7 @@ GameObject:
   - component: {fileID: 1493758285}
   m_Layer: 0
   m_Name: Parede (2)
-  m_TagString: Untagged
+  m_TagString: Chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14604,7 +14604,7 @@ GameObject:
   - component: {fileID: 1883317815}
   m_Layer: 0
   m_Name: Parede (1)
-  m_TagString: Untagged
+  m_TagString: Chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15098,7 +15098,7 @@ GameObject:
   - component: {fileID: 1985834003}
   m_Layer: 0
   m_Name: Parede (3)
-  m_TagString: Untagged
+  m_TagString: Chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -13,6 +13,7 @@ public class SelecaoDeFases : MonoBehaviour
     [SerializeField] List<GameObject> Fases;
     [SerializeField] float velocidadeSeletor = 5f;
     [SerializeField] GameObject FadeInBlack;
+    TipoDeFase tipoAtual;
 
     private void Start()
     {
@@ -62,11 +63,22 @@ public class SelecaoDeFases : MonoBehaviour
         if(faseAtual != null)
         {
             TransicaoEditor Editor = Camera.main.gameObject.GetComponent<TransicaoEditor>();
+            string faseFinal = faseAtual.NomeDaFase + "_" + tipoAtual.ToString();
             Editor.IniciarTransicaoFadeIN(FadeInBlack, 
-                delegate { C_Jogo.instancia.MudarCena(faseAtual.NomeDaFase); });
+                delegate { C_Jogo.instancia.MudarCena(faseFinal); });
         }
 
     }
 
+    public void MudarTipoDeFase(TipoDeFase novoTipo)
+    {
+        tipoAtual = novoTipo;
+    }
+}
 
+public enum TipoDeFase
+{
+    normal,
+    dificil,
+    infinito
 }

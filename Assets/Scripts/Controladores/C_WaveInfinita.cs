@@ -12,20 +12,19 @@ public class C_WaveInfinita : MonoBehaviour
 
     [SerializeField] float valorFlowTotal = 4.1f;
     [SerializeField] float influenciaDePicos = 1.2f;
-    float contadorDePicos = 0;
     [SerializeField] float tempoEntrePicos = 2.5f;
-    float pontosDaWaveAnterior = 0;
     float pontosDisponiveisParaEssaWave = 0;
     int waveAtual = 0;
     int tentativasDeCompra = 0;
     int valorInicial = 1;
     [SerializeField] int maximoDeTentativas = 5;
+    List<int> indexsTentados = new List<int>();
 
-    private void Start()
+
+    public void StartWave()
     {
         StartCoroutine(ProcessarWave());
     }
-
 
     IEnumerator ProcessarWave()
     {
@@ -41,13 +40,16 @@ public class C_WaveInfinita : MonoBehaviour
                 }
                 else
                 {
+                    Debug.Log("Inimigo é nulo");
                     tentativasDeCompra++;
                 }
             }
 
             tentativasDeCompra = 0;
+            indexsTentados.Clear();
             waveAtual++;
             pontosDisponiveisParaEssaWave = EscolherNovaPontuacaoMatematicamente();
+            Debug.Log(pontosDisponiveisParaEssaWave);
             yield return new WaitForSeconds(tempoEntreWaves);
         }
     }
@@ -60,12 +62,16 @@ public class C_WaveInfinita : MonoBehaviour
     Inimigo EscolherInimigoParaWave()
     {
         int random = Random.Range(0, inimigosDisponiveis.Count);
+        while(indexsTentados.Exists(x => x == random))
+        {
+            random = Random.Range(0, inimigosDisponiveis.Count);
+        }
         if(inimigosDisponiveis[random].tempo <= pontosDisponiveisParaEssaWave)
         {
             pontosDisponiveisParaEssaWave -= inimigosDisponiveis[random].tempo;
             return inimigosDisponiveis[random].inimigo;
         }
-
+        indexsTentados.Add(random);
         return null;
     }
 
@@ -73,6 +79,11 @@ public class C_WaveInfinita : MonoBehaviour
     {
         Vector3 dir = WaypointInicial.GetNovoWaypoint().Position - WaypointInicial.transform.position;
         Quaternion Rotacao = Quaternion.LookRotation(dir);
+        if(inimigo.inimigo == null)
+        {
+            Debug.LogError("Inimigo " + inimigo.name + " é nulo.");
+            return;
+        }
         GameObject InimigoInvocadoObjeto = Instantiate(inimigo.inimigo, WaypointInicial.Position, Rotacao);
         Inimigo_Objeto inimigoObjeto = InimigoInvocadoObjeto.GetComponent<Inimigo_Objeto>();
         inimigo.SetarInfoEmInimigo(inimigoObjeto);

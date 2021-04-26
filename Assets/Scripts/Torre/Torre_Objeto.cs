@@ -19,6 +19,9 @@ public class Torre_Objeto : MonoBehaviour
     private void Start()
     {
         torreUsada = (Torre)ScriptableObject.CreateInstance(typeof(Torre));
+        torreUsada.Bala = TorreAssociada.Bala;
+        torreUsada.Raio = TorreAssociada.Raio;
+        torreUsada.TempoDeRecarga = TorreAssociada.TempoDeRecarga;
     }
 
     private void Update()

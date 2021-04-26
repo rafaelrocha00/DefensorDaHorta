@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1806636, g: 0.22616717, b: 0.3071263, a: 1}
+  m_IndirectSpecularColor: {r: 0.18066406, g: 0.22616789, b: 0.30712745, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -776,7 +776,7 @@ GameObject:
   - component: {fileID: 92966858}
   m_Layer: 0
   m_Name: Parede (1)
-  m_TagString: Untagged
+  m_TagString: Chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3924,7 +3924,7 @@ GameObject:
   - component: {fileID: 651887578}
   m_Layer: 0
   m_Name: Parede (3)
-  m_TagString: Untagged
+  m_TagString: Chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12829,7 +12829,7 @@ GameObject:
   - component: {fileID: 1300285796}
   m_Layer: 0
   m_Name: Parede (2)
-  m_TagString: Untagged
+  m_TagString: Chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -14168,7 +14168,7 @@ GameObject:
   - component: {fileID: 1475213861}
   m_Layer: 0
   m_Name: Parede (4)
-  m_TagString: Untagged
+  m_TagString: Chao
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17562,6 +17562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: ea9f1177fba2fcd4990af1d1b5c5c5e4, type: 2}
+  tempoDisponivelParaTransicao: 1
 --- !u!114 &1756521633
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -44,7 +44,7 @@ public class Projetil : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (other.gameObject.tag == "Chao" || other.gameObject.tag == "Parede")
+        if (other.gameObject.tag == "Chao")
         {
             Debug.Log("Colediu com cenario");
             Destroy(gameObject);
