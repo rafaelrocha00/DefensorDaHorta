@@ -25,6 +25,7 @@ public class SelecaoDeFases : MonoBehaviour
             }
         }
         Avancar.onClick.AddListener(MudarCena);
+        Avancar.interactable = false;
     }
 
     public void Selecionar(BotaoFase novaFase)
@@ -47,6 +48,9 @@ public class SelecaoDeFases : MonoBehaviour
             seletor.gameObject.SetActive(true);
             seletor.transform.position = faseAtual.transform.position;
         }
+
+        Avancar.interactable = true;
+
     }
 
     IEnumerator MoverSeletor()

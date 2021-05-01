@@ -55,6 +55,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -79,6 +80,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &817604369217738939
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,6 +166,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -188,6 +191,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &4114105779155257279
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,6 +204,7 @@ GameObject:
   - component: {fileID: 7484610920423031222}
   - component: {fileID: 7429417504729688447}
   - component: {fileID: -5043090570975962555}
+  - component: {fileID: 8600427230776430988}
   m_Layer: 0
   m_Name: Picles
   m_TagString: Untagged
@@ -241,10 +246,6 @@ MonoBehaviour:
   - {fileID: 1331955524453467423}
   - {fileID: 737921150427638049}
   Cabeca: {fileID: 8687246698861135149}
-  AfetadosPelaSelecao:
-  - {fileID: 737921150427638049}
-  materialSelecionado: {fileID: 0}
-  materialBase: {fileID: 0}
   PontoDeTiro: {fileID: 817604369217738939}
 --- !u!65 &7429417504729688447
 BoxCollider:
@@ -275,6 +276,22 @@ MonoBehaviour:
   OfssetChao: 0.23
   material: {fileID: 2100000, guid: 2015c1d34e25ffe408ecfdb9593cc934, type: 2}
   cor: {r: 1, g: 0.2028302, b: 0.2028302, a: 1}
+--- !u!114 &8600427230776430988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4114105779155257279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64a5c451d3433b42afb72935f9b43fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AfetadosPelaSelecao:
+  - {fileID: 737921150427638049}
+  materialSelecionado: {fileID: 2100000, guid: d3a2f2d54d5c8eb4584c7c644087bae1, type: 2}
+  materialBase: {fileID: 2100000, guid: f0f1d347d0ca69440ba2f04d562129e7, type: 2}
 --- !u!1 &5094340997882271085
 GameObject:
   m_ObjectHideFlags: 0
@@ -334,6 +351,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -358,6 +376,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &5207169390307223223
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,6 +432,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -437,6 +457,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &8687246698861135149
 GameObject:
   m_ObjectHideFlags: 0

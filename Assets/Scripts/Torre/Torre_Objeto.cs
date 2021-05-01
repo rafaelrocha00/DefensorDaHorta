@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Torre_Objeto : MonoBehaviour
 {
-    public Torre TorreAssociada;
+    [SerializeField] Torre TorreAssociada;
     Torre torreUsada;
     public EventoTorre EventoAtual;
 
@@ -18,10 +18,29 @@ public class Torre_Objeto : MonoBehaviour
 
     private void Start()
     {
+        if (torreUsada == null)
+        {
+            CriarInstancaiDeTorre();
+        }
+    }
+
+    void CriarInstancaiDeTorre()
+    {
         torreUsada = (Torre)ScriptableObject.CreateInstance(typeof(Torre));
         torreUsada.Bala = TorreAssociada.Bala;
         torreUsada.Raio = TorreAssociada.Raio;
         torreUsada.TempoDeRecarga = TorreAssociada.TempoDeRecarga;
+        torreUsada.Bala = TorreAssociada.Bala;
+    }
+
+    public Torre GetTorre()
+    {
+        if(torreUsada == null)
+        {
+            CriarInstancaiDeTorre();
+        }
+
+        return torreUsada;
     }
 
     private void Update()
@@ -41,9 +60,9 @@ public class Torre_Objeto : MonoBehaviour
 
     private void OnDrawGizmos()
     {
+        if(torreUsada != null)
         Gizmos.DrawWireSphere(this.transform.position, torreUsada.Raio);
     }
 
     
-
 }

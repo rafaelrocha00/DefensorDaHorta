@@ -14,15 +14,37 @@ public class Atirando : EventoTorre
 
     public override void Agir(Torre_Objeto objetoAtuante)
     {
-        Collider[] Colisores = Physics.OverlapSphere(objetoAtuante.transform.position, objetoAtuante.TorreAssociada.Raio, C_Jogo.instancia.Inimigos);
+        Collider[] Colisores = Physics.OverlapSphere(objetoAtuante.transform.position, objetoAtuante.GetTorre().Raio, C_Jogo.instancia.Inimigos);
         if (Colisores.Length != 0)
         {
-            Olhar(objetoAtuante, Colisores[0].transform);
-            Atirar(objetoAtuante, Colisores);
+            GameObject inimigo = EncontrarODaFrente(Colisores);
+            Olhar(objetoAtuante, inimigo.transform);
+            Atirar(objetoAtuante, inimigo.transform.position);
           
         }
 
 
+    }
+
+    public GameObject EncontrarODaFrente(Collider[] colisoresInimigos)
+    {
+        Inimigo_Objeto[] inimigos = new Inimigo_Objeto[colisoresInimigos.Length];
+        for (int i = 0; i < inimigos.Length; i++)
+        {
+            inimigos[i] = colisoresInimigos[i].GetComponent<Inimigo_Objeto>();
+        }
+
+        int inimigoAFrente = 0;
+
+        for (int i = 0; i < inimigos.Length; i++)
+        {
+            if(inimigos[i].GetPosicaoNaFila() <= inimigos[inimigoAFrente].GetPosicaoNaFila())
+            {
+                inimigoAFrente = i;
+            }
+        }
+
+        return inimigos[inimigoAFrente].gameObject;
     }
 
     public void Olhar(Torre_Objeto objetoAtuante, Transform PosicaoInimigo)
@@ -37,19 +59,9 @@ public class Atirando : EventoTorre
 
     }
 
-    public void Atirar(Torre_Objeto objetoAtuante, Collider[] Colisores)
+    public void Atirar(Torre_Objeto objetoAtuante, Vector3 pos)
     {
-        if (!EstaRecarregando)
-        {
-            if (Colisores.Length != 0)
-            {
-                objetoAtuante.Atirar(Colisores[0].gameObject.transform.position);                
-                EstaRecarregando = true;
-                TempoDeRecarga = objetoAtuante.TorreAssociada.TempoDeRecarga;
-            }
-
-        }
-        else
+        if (EstaRecarregando)
         {
             TempoDeRecarga -= Time.deltaTime;
             if (TempoDeRecarga <= 0)
@@ -57,6 +69,11 @@ public class Atirando : EventoTorre
                 EstaRecarregando = false;
                 TempoDeRecarga = 0;
             }
+            return;
         }
+
+        objetoAtuante.Atirar(pos);
+        EstaRecarregando = true;
+        TempoDeRecarga = objetoAtuante.GetTorre().TempoDeRecarga;
     }
 }

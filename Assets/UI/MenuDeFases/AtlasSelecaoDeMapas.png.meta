@@ -47,6 +47,12 @@ TextureImporter:
   - first:
       213: -3610436941369293684
     second: Seletor_Fases
+  - first:
+      213: -1645475782446877615
+    second: CoelhoChefe
+  - first:
+      213: -1145169565916054492
+    second: CaixaDeDialogo
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -441,7 +447,7 @@ TextureImporter:
         width: 139
         height: 149
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -449,6 +455,48 @@ TextureImporter:
       bones: []
       spriteID: c844cb11bb625edc0800000000000000
       internalID: -3610436941369293684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CoelhoChefe
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 19
+        width: 632
+        height: 896
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 154feb47e781a29e0800000000000000
+      internalID: -1645475782446877615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaixaDeDialogo
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 49
+        width: 868
+        height: 462
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42c3cffd85a8b10f0800000000000000
+      internalID: -1145169565916054492
       vertices: []
       indices: 
       edges: []

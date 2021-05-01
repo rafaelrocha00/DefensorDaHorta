@@ -5,6 +5,7 @@ using System;
 
 public class C_Wave : MonoBehaviour
 {
+    public int ultimaPosicao = 0;
     public List<Wave> Waves;
     int IndexWaveAtual = 0;
     int IndexInimigoAtual = 0;
@@ -86,6 +87,8 @@ public class C_Wave : MonoBehaviour
         inimigoObjeto.MudarWaypoint(WaypointInicial);
         inimigoObjeto.AcertouVida += C_Fase.instancia.RetirarVida;
         inimigoObjeto.Morreu += Retirarinimigo;
+        inimigoObjeto.SetarPosicaoNaFila(ultimaPosicao);
+        ultimaPosicao++;
     }
 
     public void Retirarinimigo(Inimigo_Objeto inimigo)

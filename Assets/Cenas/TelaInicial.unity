@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -393,6 +393,7 @@ GameObject:
   - component: {fileID: 87681191}
   - component: {fileID: 87681194}
   - component: {fileID: 87681190}
+  - component: {fileID: 87681195}
   m_Layer: 5
   m_Name: Sair
   m_TagString: Untagged
@@ -527,6 +528,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: f0cdc4be601df644183f1eb0ce4a78cf, type: 3}
+--- !u!114 &87681195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87681188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2e2df6d50e15143be88e600d8f7d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  porcentagemCrescimento: 15
+  voltarAoTamanhoOriginal: 0
 --- !u!1 &120667005
 GameObject:
   m_ObjectHideFlags: 0
@@ -978,6 +993,7 @@ GameObject:
   - component: {fileID: 216555214}
   - component: {fileID: 216555213}
   - component: {fileID: 216555217}
+  - component: {fileID: 216555218}
   m_Layer: 5
   m_Name: NovoJogo
   m_TagString: Untagged
@@ -1114,6 +1130,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: f0cdc4be601df644183f1eb0ce4a78cf, type: 3}
+--- !u!114 &216555218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216555211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2e2df6d50e15143be88e600d8f7d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  porcentagemCrescimento: 15
+  voltarAoTamanhoOriginal: 0
 --- !u!1 &297108992
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,6 +1196,7 @@ GameObject:
   - component: {fileID: 424333135}
   - component: {fileID: 424333134}
   - component: {fileID: 424333138}
+  - component: {fileID: 424333139}
   m_Layer: 5
   m_Name: Opcoes
   m_TagString: Untagged
@@ -1302,6 +1333,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: f0cdc4be601df644183f1eb0ce4a78cf, type: 3}
+--- !u!114 &424333139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 424333132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2e2df6d50e15143be88e600d8f7d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  porcentagemCrescimento: 15
+  voltarAoTamanhoOriginal: 0
 --- !u!1 &467438115
 GameObject:
   m_ObjectHideFlags: 0
@@ -8968,3 +9013,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Main: {fileID: 0}
+--- !u!114 &2126927256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126927252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d888e26d5e2831143bb26e6cae5216ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  podeSelecionar: 1

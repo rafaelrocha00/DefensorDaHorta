@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Inimigo_Objeto: MonoBehaviour
 {
+    int posicaoNaFila = -1;
     //Status
     public float velocidade;
     float velocidadeinicial;
@@ -119,6 +120,16 @@ public class Inimigo_Objeto: MonoBehaviour
     public void MudarWaypoint(Waypoint novoWaypoint)
     {
         waypointAtual = novoWaypoint;
+    }
+
+    public int GetPosicaoNaFila()
+    {
+        return posicaoNaFila;
+    }
+
+    public void SetarPosicaoNaFila(int novaPosicao)
+    {
+        posicaoNaFila = novaPosicao;
     }
 
     

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -987,6 +987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: ea9f1177fba2fcd4990af1d1b5c5c5e4, type: 2}
+  tempoDisponivelParaTransicao: 1
 --- !u!1 &501686285
 GameObject:
   m_ObjectHideFlags: 0
@@ -1170,6 +1171,8 @@ GameObject:
   - component: {fileID: 604816605}
   - component: {fileID: 604816604}
   - component: {fileID: 604816606}
+  - component: {fileID: 604816607}
+  - component: {fileID: 604816608}
   m_Layer: 5
   m_Name: Torre_2
   m_TagString: Untagged
@@ -1309,6 +1312,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 29a5418ea156cf0438225aabd15e2093, type: 3}
+--- !u!114 &604816607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604816600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2e2df6d50e15143be88e600d8f7d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  porcentagemCrescimento: 10
+--- !u!114 &604816608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604816600}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecee7318e57aeb54cb405d1a095fe319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angulo: -5
 --- !u!1 &679593388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,6 +1552,7 @@ GameObject:
   - component: {fileID: 753759039}
   - component: {fileID: 753759038}
   - component: {fileID: 753759037}
+  - component: {fileID: 753759043}
   m_Layer: 5
   m_Name: Voltar
   m_TagString: Untagged
@@ -1672,6 +1702,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753759035}
   m_CullTransparentMesh: 0
+--- !u!114 &753759043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 753759035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2e2df6d50e15143be88e600d8f7d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  porcentagemCrescimento: 10
 --- !u!1 &766354713
 GameObject:
   m_ObjectHideFlags: 0
@@ -2063,7 +2106,7 @@ GameObject:
   - component: {fileID: 1045246018}
   - component: {fileID: 1045246017}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BG_Cinema
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2140,6 +2183,8 @@ GameObject:
   - component: {fileID: 1051176159}
   - component: {fileID: 1051176158}
   - component: {fileID: 1051176160}
+  - component: {fileID: 1051176161}
+  - component: {fileID: 1051176162}
   m_Layer: 5
   m_Name: Torre_3
   m_TagString: Untagged
@@ -2279,6 +2324,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 29a5418ea156cf0438225aabd15e2093, type: 3}
+--- !u!114 &1051176161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051176154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2e2df6d50e15143be88e600d8f7d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  porcentagemCrescimento: 10
+--- !u!114 &1051176162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1051176154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecee7318e57aeb54cb405d1a095fe319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angulo: 5
 --- !u!1 &1052412168
 GameObject:
   m_ObjectHideFlags: 0
@@ -2522,6 +2593,7 @@ GameObject:
   - component: {fileID: 1254240959}
   - component: {fileID: 1254240962}
   - component: {fileID: 1254240963}
+  - component: {fileID: 1254240965}
   m_Layer: 5
   m_Name: EscolherFase
   m_TagString: Untagged
@@ -2671,6 +2743,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: f0cdc4be601df644183f1eb0ce4a78cf, type: 3}
+--- !u!114 &1254240965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1254240957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2e2df6d50e15143be88e600d8f7d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  porcentagemCrescimento: 10
 --- !u!1 &1339058177
 GameObject:
   m_ObjectHideFlags: 0
@@ -2987,7 +3072,7 @@ GameObject:
   - component: {fileID: 1396318471}
   - component: {fileID: 1396318470}
   m_Layer: 5
-  m_Name: Image
+  m_Name: BG_Separacao
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3718,6 +3803,8 @@ GameObject:
   - component: {fileID: 1770451925}
   - component: {fileID: 1770451926}
   - component: {fileID: 1770451927}
+  - component: {fileID: 1770451928}
+  - component: {fileID: 1770451929}
   m_Layer: 5
   m_Name: Torre_4
   m_TagString: Untagged
@@ -3857,6 +3944,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 29a5418ea156cf0438225aabd15e2093, type: 3}
+--- !u!114 &1770451928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770451921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2e2df6d50e15143be88e600d8f7d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  porcentagemCrescimento: 10
+--- !u!114 &1770451929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1770451921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecee7318e57aeb54cb405d1a095fe319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angulo: -5
 --- !u!1 &1782904998
 GameObject:
   m_ObjectHideFlags: 0
@@ -4369,6 +4482,8 @@ GameObject:
   - component: {fileID: 1922361479}
   - component: {fileID: 1922361480}
   - component: {fileID: 1922361481}
+  - component: {fileID: 1922361482}
+  - component: {fileID: 1922361483}
   m_Layer: 5
   m_Name: Torre_1
   m_TagString: Untagged
@@ -4509,6 +4624,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clip: {fileID: 8300000, guid: 29a5418ea156cf0438225aabd15e2093, type: 3}
+--- !u!114 &1922361482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922361475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2e2df6d50e15143be88e600d8f7d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  porcentagemCrescimento: 10
+--- !u!114 &1922361483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1922361475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecee7318e57aeb54cb405d1a095fe319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angulo: 5
 --- !u!1 &1962569895
 GameObject:
   m_ObjectHideFlags: 0

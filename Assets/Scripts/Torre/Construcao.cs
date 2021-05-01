@@ -13,7 +13,7 @@ public class Construcao : EventoTorre
 
     public override void Agir(Torre_Objeto objetoAtuante)
     {
-
+        C_Jogo.instancia.GetComponent<C_Input>().podeSelecionar = false;
         RaycastHit Hit;
         Ray Raio = Camera.main.ScreenPointToRay(Input.mousePosition);
 
@@ -28,7 +28,7 @@ public class Construcao : EventoTorre
                     render = objetoAtuante.GetComponent<Torre_Objeto>().Render;
                 }
 
-                if (Hit.collider.gameObject.tag == "TerrenoAcessivel")
+                if (Hit.collider.gameObject.CompareTag("TerrenoAcessivel"))
                 {
                     for (int i = 0; i < render.Count; i++)
                     {
@@ -47,6 +47,8 @@ public class Construcao : EventoTorre
                         objetoAtuante.gameObject.transform.position = new Vector3(Mathf.Round(Hit.point.x), Mathf.Round(Hit.point.y), Mathf.Round(Hit.point.z));
                         objetoAtuante.GetComponent<LineRenderer>().enabled = false;
                         objetoAtuante.gameObject.layer = LayerMask.NameToLayer("Chao");
+                        C_Jogo.instancia.GetComponent<C_Input>().podeSelecionar = true;
+
                         objetoAtuante.EventoAtual = new Atirando();
                     }
                 }

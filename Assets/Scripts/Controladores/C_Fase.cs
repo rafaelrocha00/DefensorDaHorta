@@ -9,6 +9,7 @@ public class C_Fase : MonoBehaviour
     public Action VidaMudou;
     public Action Perdeu;
     public Action DinheiroMudou;
+    public Action<Torre_Objeto> TorreSelecionada;
     public static C_Fase instancia;
 
     private void Awake()

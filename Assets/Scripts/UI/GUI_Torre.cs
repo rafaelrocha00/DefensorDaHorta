@@ -12,10 +12,9 @@ public class GUI_Torre : MonoBehaviour
     public Material material;
     public Color cor;
     
-
     private void Start()
     {
-        Torre = GetComponent<Torre_Objeto>().TorreAssociada;
+        Torre = GetComponent<Torre_Objeto>().GetTorre();
         Raio = Torre.Raio;
         DesenharRaio();
     }

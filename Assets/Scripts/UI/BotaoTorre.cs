@@ -33,6 +33,7 @@ public class BotaoTorre : MonoBehaviour, IPointerEnterHandler
     public void OnPointerEnter(PointerEventData eventData)
     {
         gui.AtualizarTextoPreco(Preco);
+        C_Fase.instancia.TorreSelecionada?.Invoke(TorreAssociada.GetComponent<Torre_Objeto>());
     }
 
     void AtualizarTorre()
@@ -50,5 +51,10 @@ public class BotaoTorre : MonoBehaviour, IPointerEnterHandler
             }
         }
    
+    }
+
+    public float GetPreco()
+    {
+        return Preco;
     }
 }

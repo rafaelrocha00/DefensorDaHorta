@@ -7,6 +7,7 @@ public class Torre_Selecionavel : MonoBehaviour, Iinteragivel
     [SerializeField] List<Renderer> AfetadosPelaSelecao = new List<Renderer>();
     [SerializeField] public Material materialSelecionado;
     [SerializeField] Material materialBase;
+    LineRenderer line;
 
     public void Selecionar(Color corSelecao)
     {
@@ -15,6 +16,12 @@ public class Torre_Selecionavel : MonoBehaviour, Iinteragivel
         {
             AfetadosPelaSelecao[i].material = materialSelecionado;
         }
+
+        if(line == null)
+        {
+            line = GetComponent<LineRenderer>();
+        }
+        line.enabled = true;
     }
 
     public void Deselecionar()
@@ -23,5 +30,8 @@ public class Torre_Selecionavel : MonoBehaviour, Iinteragivel
         {
             AfetadosPelaSelecao[i].material = materialBase;
         }
+
+        line.enabled = false;
+
     }
 }

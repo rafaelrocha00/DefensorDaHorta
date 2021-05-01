@@ -61,9 +61,5 @@ public class C_Jogo : MonoBehaviour
         Application.Quit();
     }
 
-    private void Update()
-    {
-        jogador.Selecionar();
-    }
 
 }
