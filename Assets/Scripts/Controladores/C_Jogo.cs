@@ -12,7 +12,7 @@ public class C_Jogo : MonoBehaviour
     public LayerMask Inimigos;
     public float TempoPadraoDeInvocacao = 0.5f;
     public float OfssetInimigo = 0.1f;
-    public Jogador jogador = new Jogador();
+    [SerializeField]Jogador jogadorAtual;
 
     public Color Padrao;
     public Color Selecionado;
@@ -61,5 +61,9 @@ public class C_Jogo : MonoBehaviour
         Application.Quit();
     }
 
+    public Jogador GetJogadorAtual()
+    {
+        return jogadorAtual;
+    }
 
 }

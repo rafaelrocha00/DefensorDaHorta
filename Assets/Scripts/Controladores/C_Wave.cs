@@ -103,7 +103,7 @@ public class C_Wave : MonoBehaviour
             Debug.Log("Fim de Partida.");
             if (!venceu)
             {
-                C_Jogo.instancia.jogador.FasesLiberadas++;
+                C_Jogo.instancia.GetJogadorAtual().FasesLiberadas++;
                 venceu = true;
                 Venceu?.Invoke();
 

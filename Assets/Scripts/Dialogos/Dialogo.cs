@@ -36,7 +36,7 @@ public class Dialogo : MonoBehaviour
 
     bool ChecarSave()
     {
-        return C_Jogo.instancia.jogador.dialogosJaVistos.Exists(x => x == id);
+        return C_Jogo.instancia.GetJogadorAtual().dialogosJaVistos.Exists(x => x == id);
     }
 
     void MostrarDialogo()
@@ -44,7 +44,7 @@ public class Dialogo : MonoBehaviour
         if (dialogoAtual >= dialogos.Count)
         {
             mostrandoDialogo = false;
-            C_Jogo.instancia.jogador.dialogosJaVistos.Add(id);
+            C_Jogo.instancia.GetJogadorAtual().dialogosJaVistos.Add(id);
             gui.SairDoDialogo();
             return;
         }

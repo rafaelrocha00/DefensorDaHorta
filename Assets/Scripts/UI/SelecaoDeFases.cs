@@ -13,13 +13,13 @@ public class SelecaoDeFases : MonoBehaviour
     [SerializeField] List<GameObject> Fases;
     [SerializeField] float velocidadeSeletor = 5f;
     [SerializeField] GameObject FadeInBlack;
-    TipoDeFase tipoAtual;
+    ModoDeDificuldade tipoAtual;
 
     private void Start()
     {
         for (int i = 0; i < Fases.Count; i++)
         {
-            if(C_Jogo.instancia.jogador.FasesLiberadas >= i)
+            if(C_Jogo.instancia.GetJogadorAtual().FasesLiberadas >= i)
             {
                 Fases[i].SetActive(true);
             }
@@ -74,15 +74,10 @@ public class SelecaoDeFases : MonoBehaviour
 
     }
 
-    public void MudarTipoDeFase(TipoDeFase novoTipo)
+    public void MudarTipoDeFase(ModoDeDificuldade novoTipo)
     {
         tipoAtual = novoTipo;
     }
 }
 
-public enum TipoDeFase
-{
-    normal,
-    dificil,
-    infinito
-}
+

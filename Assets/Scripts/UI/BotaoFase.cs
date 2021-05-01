@@ -29,7 +29,7 @@ public class BotaoFase : MonoBehaviour
 
     void SetarBotao()
     {
-        if(C_Jogo.instancia.jogador.FasesLiberadas >=NumeroDaFase)
+        if(C_Jogo.instancia.GetJogadorAtual().FasesLiberadas >=NumeroDaFase)
         {
             botao.interactable = true;
         }

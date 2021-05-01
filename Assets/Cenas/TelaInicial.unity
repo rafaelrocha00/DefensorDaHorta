@@ -8954,6 +8954,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5006820395556916506, guid: 7a6e8d5061ce5e146842f28ed194fa6d,
         type: 3}
+      propertyPath: jogadorAtual
+      value: 
+      objectReference: {fileID: 11400000, guid: 6db519b4aaa77304a9c1c53198ba57a4,
+        type: 2}
+    - target: {fileID: 5006820395556916506, guid: 7a6e8d5061ce5e146842f28ed194fa6d,
+        type: 3}
       propertyPath: Selecionado.a
       value: 0.83137256
       objectReference: {fileID: 0}

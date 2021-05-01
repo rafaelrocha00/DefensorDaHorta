@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class BotaoTipoDeFase : MonoBehaviour
 {
-    [SerializeField] TipoDeFase tipoAMudar;
+    [SerializeField] ModoDeDificuldade tipoAMudar;
     [SerializeField] SelecaoDeFases seletor;
 
     private void Start()
