@@ -18,18 +18,30 @@ EditorBuildSettings:
     path: Assets/Cenas/Opcoes.unity
     guid: 41eceba25244f1a479a4bf86bc463f3e
   - enabled: 1
-    path: Assets/Cenas/Fase1_Normal.unity
+    path: Assets/Cenas/Fase1_Dificil.unity
     guid: 4b78bbd998315204eb295776a5493dab
+  - enabled: 1
+    path: Assets/Cenas/Fase1_Normal.unity
+    guid: 72112c6310ffede49be26e2adb13f2df
   - enabled: 1
     path: Assets/Cenas/Fase1_Infinito.unity
     guid: a7ae08dc50f655940ba854209f601c89
   - enabled: 1
-    path: Assets/Cenas/Fase2_Normal.unity
+    path: Assets/Cenas/Fase2_Dificil.unity
     guid: cf057f6a6afc86e4982a19fbaace9492
+  - enabled: 1
+    path: Assets/Cenas/Fase2_Normal.unity
+    guid: 6ff5bb1d22033094887c33646eadf3e2
   - enabled: 1
     path: Assets/Cenas/Fase2_Infinito.unity
     guid: 1fbc09fceff510c4ca14ff0a0e2df25f
   - enabled: 1
-    path: Assets/Cenas/Fase3_Normal.unity
+    path: Assets/Cenas/Fase3_Dificil.unity
     guid: f12870d6c7e71c04898fc18ce5e4d4aa
+  - enabled: 1
+    path: Assets/Cenas/Fase3_Normal.unity
+    guid: 46f410de82b1bc04898a9e4232f54223
+  - enabled: 1
+    path: Assets/Cenas/Fase3_Infinito.unity
+    guid: b68993e844668154fb29eb8427f2dd5f
   m_configObjects: {}

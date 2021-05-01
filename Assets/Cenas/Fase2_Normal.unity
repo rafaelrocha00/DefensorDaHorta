@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18353334, g: 0.22907653, b: 0.30564395, a: 1}
+  m_IndirectSpecularColor: {r: 0.18353297, g: 0.22907579, b: 0.30564272, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -6704,19 +6704,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Waves:
-  - {fileID: 11400000, guid: 54033bf33456e10448db2b5f2d27877e, type: 2}
-  - {fileID: 11400000, guid: 26096233ab00aa24fa6f8a1a11476b3e, type: 2}
-  - {fileID: 11400000, guid: b2a0b64a96c7fbb4cb7baf475f662906, type: 2}
-  - {fileID: 11400000, guid: fde00582d214aea4f9728d12ce07e4aa, type: 2}
-  - {fileID: 11400000, guid: a6c4834359c7521438cfda04ba069e53, type: 2}
-  - {fileID: 11400000, guid: 5c2c91f0e64350244a8226776a6f8e12, type: 2}
-  - {fileID: 11400000, guid: 249b64a98bf71344ba6f687e4c27eda9, type: 2}
-  - {fileID: 11400000, guid: 145cf1e36b8ae3645b81f671e022fea5, type: 2}
-  - {fileID: 11400000, guid: ab971b0949c22ba4d82b708e43fd1572, type: 2}
-  - {fileID: 11400000, guid: b6af59ac95c761249990fefd91b52beb, type: 2}
-  - {fileID: 11400000, guid: 6a6cd16e8397b9f4793e2c771d0b8934, type: 2}
-  - {fileID: 11400000, guid: 38d6c430ec4f2314992f8e86a48952e4, type: 2}
-  - {fileID: 11400000, guid: 63df4868560116844998ebb072c59056, type: 2}
+  - {fileID: 11400000, guid: f9d3cd35d0dec874b940f8610f171a7a, type: 2}
+  - {fileID: 11400000, guid: 5ba184293f39a6643b4d868c7021e771, type: 2}
+  - {fileID: 11400000, guid: df7a5d2daf4e79740ba7eb20a344aca6, type: 2}
+  - {fileID: 11400000, guid: b6beeedef00c1174a815656abf3baa13, type: 2}
+  - {fileID: 11400000, guid: 15535403f79f55d41aa064efaf964c7c, type: 2}
+  - {fileID: 11400000, guid: a7d3bce29992a424f854c35c99442d36, type: 2}
+  - {fileID: 11400000, guid: 95730ca6a278424498410ba201d1f696, type: 2}
+  - {fileID: 11400000, guid: 82f9ce34441309d45b73fb74346db193, type: 2}
+  - {fileID: 11400000, guid: cfece9a1ba1476f4ba33b175fa1b1829, type: 2}
+  - {fileID: 11400000, guid: 201c3e339e7284943b2c6fbc52719de4, type: 2}
+  - {fileID: 11400000, guid: 1859c534c64794244a799545ca79203f, type: 2}
+  - {fileID: 11400000, guid: 5ca3637fa2290d14bb70e4913f38c242, type: 2}
+  - {fileID: 11400000, guid: 54d15b7d621af4b4eafa1f4a9b39e300, type: 2}
+  - {fileID: 11400000, guid: 7fec358af6b0a3b479a98301ee69869c, type: 2}
+  - {fileID: 11400000, guid: 65ff13f6c0dd8e64d9f30a687b5254e9, type: 2}
+  - {fileID: 11400000, guid: f4d7cb29258eaec4eade69b3cc53053c, type: 2}
   WaypointInicial: {fileID: 876832331}
   InimigosPresentes: []
   VidaAtual: 20
