@@ -2,12 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Evolucao : MonoBehaviour
+public class Evolucao : ScriptableObject
 {
-    public float preco;
+    [SerializeField] Evolucao proximaEvolucao;
+    [SerializeField] float preco;
 
     public virtual void Evoluir(Torre_Objeto torre)
     {
 
+    }
+
+    public float GetPreco()
+    {
+        return preco;
+    }
+
+    public Evolucao GetEvolucao()
+    {
+        return proximaEvolucao;
     }
 }

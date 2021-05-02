@@ -1869,7 +1869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 013f3c7e3b66cf14083ba7e0523f3c4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 1
+  id: 2
   gui: {fileID: 453295140}
   dialogos:
   - Estamos na fazenda do Cenoura, chefe.
@@ -6888,6 +6888,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidas: 20
   dinheiro: 50
+  nomeDaFase: Fase2_Dificil
+  nomeDaProximaFase: Fase2_Dificil
 --- !u!4 &953012050 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2073543475005784996, guid: 0e74b61e9e6f2c343a4321167218e245,

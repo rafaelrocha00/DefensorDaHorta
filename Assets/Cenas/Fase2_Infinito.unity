@@ -3044,6 +3044,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 380591441087647089, guid: 80b5c9231f0fd1b4a8571fc84b4949c7,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 380591441087647089, guid: 80b5c9231f0fd1b4a8571fc84b4949c7,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364855067596393825, guid: 80b5c9231f0fd1b4a8571fc84b4949c7,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2364855067596393825, guid: 80b5c9231f0fd1b4a8571fc84b4949c7,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5754496990050696155, guid: 80b5c9231f0fd1b4a8571fc84b4949c7,
         type: 3}
       propertyPath: m_Colors.m_NormalColor.a
@@ -3314,10 +3334,30 @@ PrefabInstance:
       propertyPath: cena
       value: Fase2
       objectReference: {fileID: 0}
+    - target: {fileID: 6812845556537458258, guid: 80b5c9231f0fd1b4a8571fc84b4949c7,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6812845556537458258, guid: 80b5c9231f0fd1b4a8571fc84b4949c7,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7492514868034637586, guid: 80b5c9231f0fd1b4a8571fc84b4949c7,
         type: 3}
       propertyPath: cena
       value: Fase3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7990680921933475289, guid: 80b5c9231f0fd1b4a8571fc84b4949c7,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7990680921933475289, guid: 80b5c9231f0fd1b4a8571fc84b4949c7,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80b5c9231f0fd1b4a8571fc84b4949c7, type: 3}
@@ -6757,6 +6797,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vidas: 20
   dinheiro: 50
+  nomeDaFase: Fase2_Infinito
+  nomeDaProximaFase: Fase3_Infinito
 --- !u!4 &953012050 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2073543475005784996, guid: 0e74b61e9e6f2c343a4321167218e245,

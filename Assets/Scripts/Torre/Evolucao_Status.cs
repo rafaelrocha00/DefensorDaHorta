@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[CreateAssetMenu(fileName = "Evolucao_Status", menuName = "Evolucao/Status")]
 public class Evolucao_Status : Evolucao
 {
     [SerializeField] Atributos atributaoParaEvoluir;

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Jogador_1
   m_EditorClassIdentifier: 
   torres: []
-  dialogosJaVistos: 
-  FasesLiberadas: 1
+  dialogosJaVistos: 0000000003000000
+  FasesLiberadas: 3
   dificuldadeEscolhida: 0

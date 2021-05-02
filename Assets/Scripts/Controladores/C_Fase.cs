@@ -12,6 +12,10 @@ public class C_Fase : MonoBehaviour
     public Action<Torre_Objeto> TorreSelecionada;
     public static C_Fase instancia;
 
+    public string nomeDaFase;
+    public string nomeDaProximaFase;
+
+
     private void Awake()
     {
         if ((instancia != this) && (instancia != null))
@@ -71,5 +75,9 @@ public class C_Fase : MonoBehaviour
     {
         return vidas;
     }
+
+    
+
+   
 
 }

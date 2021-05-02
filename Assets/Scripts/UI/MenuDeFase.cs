@@ -7,6 +7,7 @@ public class MenuDeFase : MonoBehaviour
     [SerializeField] GameObject menuPause;
     [SerializeField] GameObject menuOpcoes;
     [SerializeField] GameObject menuDeAviso;
+    [SerializeField] GameObject menuDeAvisoSairDoJogo;
     Stack<GameObject> menusAbertos = new Stack<GameObject>();
 
     void LidarComInput()
@@ -40,6 +41,11 @@ public class MenuDeFase : MonoBehaviour
     public void AbrirAvisoDeSaida()
     {
         AbrirMenu(menuDeAviso);
+    }
+
+    public void AbrirAvisoDeSaidaDoJogo()
+    {
+        AbrirMenu(menuDeAvisoSairDoJogo);
     }
 
     public void AbrirOpcoes()
