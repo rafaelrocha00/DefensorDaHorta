@@ -1252,9 +1252,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Menu: {fileID: 309231065}
-  TorreAssociada: {fileID: 2949896337534642815, guid: d03c4a05a5e05114292922d322f96c9f,
+  TorreAssociada: {fileID: 5763122669678558351, guid: f5ac7e2fd96629246a840c80c28521b6,
     type: 3}
   Descricao: "Se parece com uma melancia, mas na verdade \xE9 um picles."
+  padrao: 0
 --- !u!114 &604816605
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1276,10 +1277,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 0.56078434}
+    m_NormalColor: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 0.36078432}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 0.51093584, g: 1, b: 0.41037738, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1325,6 +1326,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   porcentagemCrescimento: 10
+  voltarAoTamanhoOriginal: 0
 --- !u!114 &604816608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1715,6 +1717,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   porcentagemCrescimento: 10
+  voltarAoTamanhoOriginal: 0
 --- !u!1 &766354713
 GameObject:
   m_ObjectHideFlags: 0
@@ -2272,10 +2275,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 0.56078434}
+    m_NormalColor: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 0.36078432}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 0.67563534, b: 0.16509432, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -2308,9 +2311,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Menu: {fileID: 309231065}
-  TorreAssociada: {fileID: 3824965189631023803, guid: a3e4dfaa28c5ee74784f8300923ebcee,
+  TorreAssociada: {fileID: 3245757564125831985, guid: 600f158fba79e3b419c5c0432a06552f,
     type: 3}
   Descricao: "Essa c\xE9noura \xE9 um fracasso na vida, mas \xE9 \xFAtil no combate."
+  padrao: 0
 --- !u!114 &1051176160
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2337,6 +2341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   porcentagemCrescimento: 10
+  voltarAoTamanhoOriginal: 0
 --- !u!114 &1051176162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2513,6 +2518,8 @@ GameObject:
   - component: {fileID: 1207499330}
   - component: {fileID: 1207499332}
   - component: {fileID: 1207499331}
+  - component: {fileID: 1207499334}
+  - component: {fileID: 1207499333}
   m_Layer: 5
   m_Name: PowerUP_1
   m_TagString: Untagged
@@ -2579,6 +2586,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1207499329}
   m_CullTransparentMesh: 0
+--- !u!114 &1207499333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207499329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecee7318e57aeb54cb405d1a095fe319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angulo: 5
+--- !u!114 &1207499334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207499329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2e2df6d50e15143be88e600d8f7d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  porcentagemCrescimento: 10
+  voltarAoTamanhoOriginal: 1
 --- !u!1 &1254240957
 GameObject:
   m_ObjectHideFlags: 0
@@ -2756,6 +2790,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   porcentagemCrescimento: 10
+  voltarAoTamanhoOriginal: 0
 --- !u!1 &1339058177
 GameObject:
   m_ObjectHideFlags: 0
@@ -2842,6 +2877,8 @@ GameObject:
   - component: {fileID: 1344480399}
   - component: {fileID: 1344480401}
   - component: {fileID: 1344480400}
+  - component: {fileID: 1344480403}
+  - component: {fileID: 1344480402}
   m_Layer: 5
   m_Name: PowerUP_2
   m_TagString: Untagged
@@ -2908,6 +2945,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344480398}
   m_CullTransparentMesh: 0
+--- !u!114 &1344480402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344480398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecee7318e57aeb54cb405d1a095fe319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angulo: 5
+--- !u!114 &1344480403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1344480398}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2e2df6d50e15143be88e600d8f7d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  porcentagemCrescimento: 10
+  voltarAoTamanhoOriginal: 1
 --- !u!1 &1369641640
 GameObject:
   m_ObjectHideFlags: 0
@@ -2919,6 +2983,8 @@ GameObject:
   - component: {fileID: 1369641641}
   - component: {fileID: 1369641643}
   - component: {fileID: 1369641642}
+  - component: {fileID: 1369641645}
+  - component: {fileID: 1369641644}
   m_Layer: 5
   m_Name: PowerUP_4
   m_TagString: Untagged
@@ -2985,6 +3051,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1369641640}
   m_CullTransparentMesh: 0
+--- !u!114 &1369641644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369641640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecee7318e57aeb54cb405d1a095fe319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angulo: 5
+--- !u!114 &1369641645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369641640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2e2df6d50e15143be88e600d8f7d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  porcentagemCrescimento: 10
+  voltarAoTamanhoOriginal: 1
 --- !u!1 &1379950415
 GameObject:
   m_ObjectHideFlags: 0
@@ -3383,7 +3476,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -795.95325, y: 19.026001}
+  m_AnchoredPosition: {x: -795.95325, y: 19.026123}
   m_SizeDelta: {x: -1663.1462, y: -544.31}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1606998984
@@ -3884,9 +3977,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Menu: {fileID: 309231065}
-  TorreAssociada: {fileID: 5235971663145288766, guid: f477c0fa0868f5a4e99dd8dab159d7b0,
+  TorreAssociada: {fileID: 7777817892217123017, guid: 3256f9c4b303f3b4099235c6fa3ad250,
     type: 3}
   Descricao: "N\xE3o o olhe diretamente, beringelas s\xE3o muito senseiveis."
+  padrao: 0
 --- !u!114 &1770451926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3908,10 +4002,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 0.56078434}
+    m_NormalColor: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 0.36078432}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 0.2783019, g: 0.4985952, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -3957,6 +4051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   porcentagemCrescimento: 10
+  voltarAoTamanhoOriginal: 0
 --- !u!114 &1770451929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4402,6 +4497,8 @@ GameObject:
   - component: {fileID: 1874384688}
   - component: {fileID: 1874384690}
   - component: {fileID: 1874384689}
+  - component: {fileID: 1874384692}
+  - component: {fileID: 1874384691}
   m_Layer: 5
   m_Name: PowerUP_3
   m_TagString: Untagged
@@ -4468,6 +4565,33 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1874384687}
   m_CullTransparentMesh: 0
+--- !u!114 &1874384691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874384687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecee7318e57aeb54cb405d1a095fe319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  angulo: 5
+--- !u!114 &1874384692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874384687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f2e2df6d50e15143be88e600d8f7d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  porcentagemCrescimento: 10
+  voltarAoTamanhoOriginal: 1
 --- !u!1 &1922361475
 GameObject:
   m_ObjectHideFlags: 0
@@ -4563,10 +4687,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Menu: {fileID: 309231065}
-  TorreAssociada: {fileID: 6167895993353358043, guid: 3bea310b630b0cf4daf7cfb6249f9abe,
+  TorreAssociada: {fileID: 6042774032506571989, guid: 0da112576f53220479ec406a76b886f7,
     type: 3}
   Descricao: "Essa abomina\xE7\xE3o sofreu tantas muta\xE7\xF5es que ningu\xE9m sabe
     o que \xE9.  "
+  padrao: 1
 --- !u!114 &1922361480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4588,10 +4713,10 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 0.56078434}
+    m_NormalColor: {r: 0.8962264, g: 0.8962264, b: 0.8962264, a: 0.36078432}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 0.8980392, g: 1, b: 0.46666667, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -4637,6 +4762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   porcentagemCrescimento: 10
+  voltarAoTamanhoOriginal: 0
 --- !u!114 &1922361483
 MonoBehaviour:
   m_ObjectHideFlags: 0

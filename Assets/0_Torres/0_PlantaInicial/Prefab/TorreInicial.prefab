@@ -55,6 +55,9 @@ MonoBehaviour:
   - {fileID: 8713766389428400086}
   - {fileID: 3494382598003682343}
   Cabeca: {fileID: 8484771877665613981}
+  evolucoesIniciais:
+  - {fileID: 11400000, guid: 428b1fef8d7dd574aa65e4fa4199b795, type: 2}
+  - {fileID: 11400000, guid: 871fae71e5e790a46aadbe19ff53292c, type: 2}
   PontoDeTiro: {fileID: 4400762036985351617}
 --- !u!65 &7704989720450632765
 BoxCollider:

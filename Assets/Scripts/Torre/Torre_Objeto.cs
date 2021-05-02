@@ -11,6 +11,12 @@ public class Torre_Objeto : MonoBehaviour
     //Selecao
     public List<Renderer> Render = new List<Renderer>();
     public GameObject Cabeca;
+
+    [SerializeField] List<Evolucao> evolucoesIniciais = new List<Evolucao>();
+    float bonusDeDano;
+    float bonusDeAlcance;
+    float bonusDeVelocidade;
+    float bonusDeRecarga;
   
 
     [SerializeField]private GameObject PontoDeTiro;
@@ -33,16 +39,6 @@ public class Torre_Objeto : MonoBehaviour
         torreUsada.Bala = TorreAssociada.Bala;
     }
 
-    public Torre GetTorre()
-    {
-        if(torreUsada == null)
-        {
-            CriarInstancaiDeTorre();
-        }
-
-        return torreUsada;
-    }
-
     private void Update()
     {
         if ((EventoAtual != null)&&(EventoAtual.Checar(this)))
@@ -55,6 +51,8 @@ public class Torre_Objeto : MonoBehaviour
     {
         Projetil projetil = Instantiate(torreUsada.Bala, PontoDeTiro.transform.position, Quaternion.identity).GetComponent<Projetil>();
         projetil.Target = Target;
+        projetil.Dano += bonusDeDano;
+        projetil.Velocidade += bonusDeVelocidade;
     }
 
 
@@ -64,5 +62,67 @@ public class Torre_Objeto : MonoBehaviour
         Gizmos.DrawWireSphere(this.transform.position, torreUsada.Raio);
     }
 
+    public void ChecarTorre()
+    {
+        if (torreUsada == null)
+        {
+            CriarInstancaiDeTorre();
+        }
+    }
+
+    public float GetRaio()
+    {
+        ChecarTorre();
+        return torreUsada.Raio + bonusDeAlcance;
+    }
+
+    public float GetTempoDeRecarga()
+    {
+        ChecarTorre();
+        return torreUsada.TempoDeRecarga + bonusDeRecarga;
+    }
+
+    public float GetDano()
+    {
+        ChecarTorre();
+        return torreUsada.GetDano() + bonusDeDano;
+    }
+
+    public void AumentarDano(float bonus)
+    {
+        bonusDeDano += bonus;
+    }
+
+    public void AumentarAlcance(float bonus)
+    {
+        Debug.LogWarning("Aumentando alcance");
+        bonusDeAlcance += bonus;
+    }
+
+    public void AumentarBonusDeRecarga(float bonus)
+    {
+        bonusDeRecarga += bonus;
+    }
+
+    public void AumentarVelocidade(float bonus)
+    {
+        bonusDeVelocidade += bonus;
+    }
+
+    public Evolucao GetEvolucao(int index)
+    {
+        evolucoesIniciais[index].SetarTorreAEvoluir(this);
+        return evolucoesIniciais[index];
+    }
     
+    public int GetQuantidadeDeEvolucoes()
+    {
+        return evolucoesIniciais.Count;
+    }
+
+    public void RetirarEvolucao(Evolucao evolucao)
+    {
+        evolucoesIniciais.Remove(evolucao);
+    }
+
 }

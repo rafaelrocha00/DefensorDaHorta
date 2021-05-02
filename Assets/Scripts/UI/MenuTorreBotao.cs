@@ -9,11 +9,17 @@ public class MenuTorreBotao : MonoBehaviour
     [SerializeField]MenuTorre Menu;
     [SerializeField] GameObject TorreAssociada;
     [TextArea][SerializeField] string Descricao;
+    [SerializeField] bool padrao;
 
     void Start()
     {
         Botao = GetComponent<Button>();
         Botao.onClick.AddListener(MudarTorre);
+        if (padrao)
+        {
+            Botao.onClick.Invoke();
+            Botao.Select();
+        }
     }
 
     void MudarTorre()

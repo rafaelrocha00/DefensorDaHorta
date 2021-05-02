@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class C_Input : MonoBehaviour
 {
+    public Action<GameObject> ObjetoSelecionado;
+    public Action NadaSelecionado;
     Iinteragivel Selecionado;
     public bool podeSelecionar = true;
 
@@ -29,17 +32,22 @@ public class C_Input : MonoBehaviour
                     {
                         Selecionado.Deselecionar();
                     }
-
                     interagivel.Selecionar(Color.white);
                     Selecionado = interagivel;
+                    ObjetoSelecionado?.Invoke(Hit.collider.gameObject);
                     return;
                 }
             }
 
+            if (CheckUI.IsPointerOverUIObject()) return;
+
             if(Selecionado != null)
             {
                 Selecionado.Deselecionar();
+                Selecionado = null;
             }
+
+            NadaSelecionado?.Invoke();
         }
 
 
@@ -55,4 +63,5 @@ public class C_Input : MonoBehaviour
 
         return null;
     }
+
 }

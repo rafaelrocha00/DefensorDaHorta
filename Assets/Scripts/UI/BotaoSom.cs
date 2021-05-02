@@ -13,6 +13,7 @@ public class BotaoSom : MonoBehaviour
 
     void PlaySom()
     {
+        if (C_Audio.audio == null) return;
         C_Audio.audio.Play(clip);
     }
 }

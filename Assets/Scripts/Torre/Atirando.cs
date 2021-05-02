@@ -14,13 +14,12 @@ public class Atirando : EventoTorre
 
     public override void Agir(Torre_Objeto objetoAtuante)
     {
-        Collider[] Colisores = Physics.OverlapSphere(objetoAtuante.transform.position, objetoAtuante.GetTorre().Raio, C_Jogo.instancia.Inimigos);
+        Collider[] Colisores = Physics.OverlapSphere(objetoAtuante.transform.position, objetoAtuante.GetRaio(), C_Jogo.instancia.Inimigos);
         if (Colisores.Length != 0)
         {
             GameObject inimigo = EncontrarODaFrente(Colisores);
             Olhar(objetoAtuante, inimigo.transform);
             Atirar(objetoAtuante, inimigo.transform.position);
-          
         }
 
 
@@ -74,6 +73,6 @@ public class Atirando : EventoTorre
 
         objetoAtuante.Atirar(pos);
         EstaRecarregando = true;
-        TempoDeRecarga = objetoAtuante.GetTorre().TempoDeRecarga;
+        TempoDeRecarga = objetoAtuante.GetTempoDeRecarga();
     }
 }

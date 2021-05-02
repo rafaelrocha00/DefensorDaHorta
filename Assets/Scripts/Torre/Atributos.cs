@@ -6,5 +6,6 @@ public enum Atributos
 {
    Dano,
    Alcance,
-   Recarga
+   Recarga,
+   Velocidade
 }

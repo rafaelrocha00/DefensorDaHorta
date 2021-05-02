@@ -18,10 +18,10 @@ public class EstatusTorre : MonoBehaviour
     {
         Debug.Log("Atualizando");
         dano.text = "Dano: ";
-        dano.text += torre.GetTorre().GetDano().ToString();
+        dano.text += torre.GetDano().ToString();
         alcance.text = "Alcance: ";
-        alcance.text += torre.GetTorre().Raio.ToString();
+        alcance.text += torre.GetRaio().ToString();
         recarga.text = "Recarga: ";
-        recarga.text += torre.GetTorre().TempoDeRecarga.ToString();
+        recarga.text += torre.GetTempoDeRecarga().ToString();
     }
 }

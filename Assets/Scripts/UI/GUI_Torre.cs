@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GUI_Torre : MonoBehaviour
 {
-    Torre Torre;
+    Torre_Objeto Torre;
     public float Largura;
     public float OfssetChao = 0.4f;
     float Raio;
@@ -14,16 +14,23 @@ public class GUI_Torre : MonoBehaviour
     
     private void Start()
     {
-        Torre = GetComponent<Torre_Objeto>().GetTorre();
-        Raio = Torre.Raio;
-        DesenharRaio();
+        Torre = GetComponent<Torre_Objeto>();
+        Line = gameObject.AddComponent<LineRenderer>();
+
+    }
+
+    private void Update()
+    {
+        if (Line != null && Line.enabled)
+        {
+            DesenharRaio();
+        }
     }
 
     void DesenharRaio()
     {
         Debug.Log("Desenhando raio");
         int Segmentos = 360;
-        Line = gameObject.AddComponent<LineRenderer>();
         Line.useWorldSpace = false;
         Line.startWidth = Largura;
         Line.endWidth = Largura;
@@ -34,6 +41,7 @@ public class GUI_Torre : MonoBehaviour
 
         int PontosCount = Segmentos + 1;
         Vector3[] Pontos = new Vector3[PontosCount];
+        Raio = Torre.GetRaio();
 
         for (int i = 0; i < PontosCount; i++)
         {

@@ -53,6 +53,18 @@ TextureImporter:
   - first:
       213: -1145169565916054492
     second: CaixaDeDialogo
+  - first:
+      213: -5820431894119120695
+    second: PowerUp_Alcance
+  - first:
+      213: 9112194128497121970
+    second: PowerUp_Dano
+  - first:
+      213: -6540960849030207917
+    second: PowerUP_Velocidade
+  - first:
+      213: -8099042928182358392
+    second: PowerUp_Recarga
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -468,7 +480,7 @@ TextureImporter:
         width: 632
         height: 896
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -489,7 +501,7 @@ TextureImporter:
         width: 868
         height: 462
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -497,6 +509,90 @@ TextureImporter:
       bones: []
       spriteID: 42c3cffd85a8b10f0800000000000000
       internalID: -1145169565916054492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_Alcance
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 164
+        width: 110
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c00dafb70ca93fa0800000000000000
+      internalID: -5820431894119120695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_Dano
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 167
+        width: 101
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ba98790844057e70800000000000000
+      internalID: 9112194128497121970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUP_Velocidade
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 41
+        width: 116
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35621d763c6d935a0800000000000000
+      internalID: -6540960849030207917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUp_Recarga
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 49
+        width: 72
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88e0d0d0e5b6a9f80800000000000000
+      internalID: -8099042928182358392
       vertices: []
       indices: 
       edges: []
