@@ -58,7 +58,7 @@ public class SelecaoDeFases : MonoBehaviour
         while(Vector3.Distance(seletor.position, faseAtual.transform.position) > 0.1f)
         {
             seletor.position = Vector3.Slerp(seletor.position, faseAtual.transform.position, Time.deltaTime * velocidadeSeletor);
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForEndOfFrame();
         }
     }
 

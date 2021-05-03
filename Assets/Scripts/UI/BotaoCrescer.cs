@@ -26,6 +26,7 @@ public class BotaoCrescer : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 
     public void OnPointerClick(PointerEventData eventData)
     {
+        if (!gameObject.activeInHierarchy) return;
         StartCoroutine(MudarTamanhoAoClicar());
     }
 

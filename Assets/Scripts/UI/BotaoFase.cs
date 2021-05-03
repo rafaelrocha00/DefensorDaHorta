@@ -12,6 +12,7 @@ public class BotaoFase : MonoBehaviour
     public Sprite imagemFase;
     Color corNormal;
     Image icon;
+    [SerializeField] bool padrao = false;
 
     private void Start()
     {
@@ -20,6 +21,11 @@ public class BotaoFase : MonoBehaviour
         botao.onClick.AddListener(ChamarSelecionar);
         icon = GetComponent<Image>();
         corNormal = icon.color;
+        if (padrao)
+        {
+            botao.onClick.Invoke();
+            botao.Select();
+        }
     }
 
     void ChamarSelecionar()

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -17,7 +17,8 @@ public class Torre_Objeto : MonoBehaviour
     float bonusDeAlcance;
     float bonusDeVelocidade;
     float bonusDeRecarga;
-  
+
+    public Action<Evolucao> EvolucaoAdicionada;
 
     [SerializeField]private GameObject PontoDeTiro;
 
@@ -118,6 +119,12 @@ public class Torre_Objeto : MonoBehaviour
     public int GetQuantidadeDeEvolucoes()
     {
         return evolucoesIniciais.Count;
+    }
+
+    public void AdicionarEvolucao(Evolucao evolucao)
+    {
+        evolucoesIniciais.Add(evolucao);
+        EvolucaoAdicionada?.Invoke(evolucao);
     }
 
     public void RetirarEvolucao(Evolucao evolucao)

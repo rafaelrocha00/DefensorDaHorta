@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e62e26b7138bbf49a2bf9a77e88c6b1, type: 3}
-  m_Name: TorreInicial_2
+  m_Name: TorreInicial_1B
   m_EditorClassIdentifier: 
   proximaEvolucao: {fileID: 0}
-  preco: 30
-  descricao: Aumenta o alcance em 1.
-  icone: {fileID: -5820431894119120695, guid: 823c326926f43984bb5d4f67c15a8b14, type: 3}
-  cor: {r: 1, g: 0.41466382, b: 0.15686274, a: 1}
-  atributaoParaEvoluir: 1
-  valorDaEvolucao: 1
+  preco: 200
+  descricao: Aumenta a velocidade de tiro em 50%.
+  icone: {fileID: -8099042928182358392, guid: 823c326926f43984bb5d4f67c15a8b14, type: 3}
+  cor: {r: 0.15686274, g: 0.34205043, b: 1, a: 1}
+  atributaoParaEvoluir: 2
+  valorDaEvolucao: -0.1

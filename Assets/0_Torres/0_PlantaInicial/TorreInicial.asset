@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: TorreInicial
   m_EditorClassIdentifier: 
   Raio: 2
-  TempoDeRecarga: 0.1
+  TempoDeRecarga: 0.3
   Bala: {fileID: 8662161473038319481, guid: 125d84e9f2b6c1d49aeae8f55c26b264, type: 3}

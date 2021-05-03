@@ -489,6 +489,7 @@ MonoBehaviour:
   selector: {fileID: 391521686}
   imagemFase: {fileID: 3834079397394529228, guid: e41fbfe5bf651334cb2b5882276ccb52,
     type: 3}
+  padrao: 0
 --- !u!114 &136357939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -752,6 +753,7 @@ MonoBehaviour:
   selector: {fileID: 391521686}
   imagemFase: {fileID: 3834079397394529228, guid: e41fbfe5bf651334cb2b5882276ccb52,
     type: 3}
+  padrao: 0
 --- !u!114 &263110485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1125,7 +1127,7 @@ MonoBehaviour:
   - {fileID: 813640364}
   - {fileID: 136357936}
   - {fileID: 1645153824}
-  velocidadeSeletor: 5
+  velocidadeSeletor: 20
   FadeInBlack: {fileID: 1808125028}
 --- !u!114 &391521687
 MonoBehaviour:
@@ -2016,6 +2018,7 @@ MonoBehaviour:
   selector: {fileID: 391521686}
   imagemFase: {fileID: -5996190116066166055, guid: e41fbfe5bf651334cb2b5882276ccb52,
     type: 3}
+  padrao: 1
 --- !u!114 &813640367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4227,6 +4230,7 @@ MonoBehaviour:
   selector: {fileID: 391521686}
   imagemFase: {fileID: 2715141370044157409, guid: e41fbfe5bf651334cb2b5882276ccb52,
     type: 3}
+  padrao: 0
 --- !u!114 &1645153827
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5830,6 +5834,7 @@ MonoBehaviour:
   selector: {fileID: 391521686}
   imagemFase: {fileID: 3834079397394529228, guid: e41fbfe5bf651334cb2b5882276ccb52,
     type: 3}
+  padrao: 0
 --- !u!114 &2058962780
 MonoBehaviour:
   m_ObjectHideFlags: 0

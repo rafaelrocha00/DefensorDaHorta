@@ -42,15 +42,26 @@ public class GUI_Evolucao : MonoBehaviour
     {
         if (painelDeEvolucoes == null) return;
 
+        if(selecionado != null)
+        {
+            selecionado.EvolucaoAdicionada -= InstanciarEvolucao;
+        }
         selecionado = torre;
+        selecionado.EvolucaoAdicionada += InstanciarEvolucao;
+
         painelDeEvolucoes.SetActive(true);
         FecharPainel();
         for (int i = 0; i < torre.GetQuantidadeDeEvolucoes(); i++)
         {
-            GameObject botao = Instantiate(BotaoEvolucao, painelDeEvolucoes.transform);
-            evolucoesAbertas.Add(botao);
-            ComponentesPainelEvolucao refe = botao.GetComponent<ComponentesPainelEvolucao>();
-            refe.SetarEvolucao(torre.GetEvolucao(i));
+            InstanciarEvolucao(torre.GetEvolucao(i));
         }
+    }
+
+    public void InstanciarEvolucao(Evolucao evolucao)
+    {
+        GameObject botao = Instantiate(BotaoEvolucao, painelDeEvolucoes.transform);
+        evolucoesAbertas.Add(botao);
+        ComponentesPainelEvolucao refe = botao.GetComponent<ComponentesPainelEvolucao>();
+        refe.SetarEvolucao(evolucao);
     }
 }

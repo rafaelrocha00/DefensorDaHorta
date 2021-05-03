@@ -14,6 +14,10 @@ public class Evolucao : ScriptableObject
     public virtual void Evoluir()
     {
         torreAssociada.RetirarEvolucao(this);
+        if(proximaEvolucao != null)
+        {
+            torreAssociada.AdicionarEvolucao(proximaEvolucao);
+        }
     }
 
     public float GetPreco()
