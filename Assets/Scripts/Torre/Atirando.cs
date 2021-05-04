@@ -1,11 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Atirando : EventoTorre
 {
     bool EstaRecarregando = false;
     float TempoDeRecarga;
+    bool girando;
 
     public override bool Checar(Torre_Objeto objetoAtuante)
     {
@@ -21,7 +23,6 @@ public class Atirando : EventoTorre
             Olhar(objetoAtuante, inimigo.transform);
             Atirar(objetoAtuante, inimigo.transform.position);
         }
-
 
     }
 
@@ -48,14 +49,24 @@ public class Atirando : EventoTorre
 
     public void Olhar(Torre_Objeto objetoAtuante, Transform PosicaoInimigo)
     {
-        Transform Objeto = objetoAtuante.Cabeca.transform;
+        Transform Objeto = objetoAtuante.GetCabeca().transform;
 
         Vector3 Direcao = (PosicaoInimigo.position - Objeto.position).normalized;
         Direcao.y = 0f;
         Quaternion RotacaoLook = Quaternion.LookRotation(Direcao);
         Objeto.rotation = Quaternion.Slerp(Objeto.rotation, RotacaoLook, Time.deltaTime * 5f);
+    }
 
-
+    public IEnumerator PararDeOlhar(Transform cabeca, Quaternion atual, Quaternion natural, Action depois)
+    {
+        float contador = 0;
+        while(contador < 1f)
+        {
+            cabeca.rotation = Quaternion.Lerp(atual, natural, contador);
+            contador += Time.deltaTime;
+            yield return new WaitForEndOfFrame();
+        }
+        depois?.Invoke();
     }
 
     public void Atirar(Torre_Objeto objetoAtuante, Vector3 pos)

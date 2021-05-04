@@ -1,16 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Animations;
 
 public class Torre_Objeto : MonoBehaviour
 {
     [SerializeField] Torre TorreAssociada;
+    [SerializeField] Animator anim;
     Torre torreUsada;
     public EventoTorre EventoAtual;
 
     //Selecao
     public List<Renderer> Render = new List<Renderer>();
-    public GameObject Cabeca;
+    [SerializeField] Transform Rotacao;
 
     [SerializeField] List<Evolucao> evolucoesIniciais = new List<Evolucao>();
     float bonusDeDano;
@@ -131,5 +133,23 @@ public class Torre_Objeto : MonoBehaviour
     {
         evolucoesIniciais.Remove(evolucao);
     }
+
+    public void PararAnimacao()
+    {
+        anim.SetBool("Atirando", true);
+        anim.enabled = false;
+    }
+
+    public void VoltarAnimacao()
+    {
+        anim.enabled = true;
+        anim.SetBool("Atirando", false);
+    }
+
+    public Transform GetCabeca()
+    {
+        return Rotacao;
+    }
+
 
 }

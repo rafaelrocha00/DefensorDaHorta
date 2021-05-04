@@ -25112,6 +25112,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 5754496991610771905, guid: 80b5c9231f0fd1b4a8571fc84b4949c7,
+        type: 3}
+      propertyPath: TorreAssociada
+      value: 
+      objectReference: {fileID: 4760144042062605337, guid: 1a5e972863c559942a110c3d7f46870c,
+        type: 3}
     - target: {fileID: 5754496991610771909, guid: 80b5c9231f0fd1b4a8571fc84b4949c7,
         type: 3}
       propertyPath: m_AnchorMax.y
