@@ -70,7 +70,7 @@ Material:
     - _OcclusionStrength: 1
     - _OutlineWidth: 0.02
     - _Parallax: 0.02
-    - _RimAmount: 1
+    - _RimAmount: 0.79
     - _RimThreshold: 0
     - _SecondOutlineWidth: 0
     - _SmoothnessTextureChannel: 0
@@ -79,13 +79,13 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _AmbientColor: {r: 0.674658, g: 0.7830189, b: 0.2031417, a: 1}
+    - _AmbientColor: {r: 0.06051977, g: 0.754717, b: 0.0770598, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FirstOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _OutilineColor: {r: 0.5896226, g: 0.68888664, b: 1, a: 1}
-    - _OutlineColor: {r: 0.78195083, g: 0.8679245, b: 0.7873524, a: 1}
+    - _OutlineColor: {r: 1, g: 1, b: 1, a: 1}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _SecondOutlineColor: {r: 0, g: 0, b: 1, a: 1}
-    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SpecularColor: {r: 1, g: 0.29171342, b: 0, a: 1}
   m_BuildTextureStacks: []

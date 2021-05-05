@@ -1,11 +1,17 @@
 fileFormatVersion: 2
-guid: d82ea8d585809c5478ce2533f3e2e180
+guid: 2cac5f7bf1f783b4496daf487e0689fe
 ModelImporter:
-  serializedVersion: 19300
-  internalIDToNameTable: []
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: -3510718430288579703
+    second: Armature|IDle
+  - first:
+      74: 2126547105437587583
+    second: Armature|Shooting
   externalObjects: {}
   materials:
-    materialImportMode: 0
+    materialImportMode: 2
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -23,14 +29,72 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|IDle
+      takeName: Armature|IDle
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 29
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Armature|Shooting
+      takeName: Armature|Shooting
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -43,11 +107,13 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
@@ -57,6 +123,9 @@ ModelImporter:
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -72,7 +141,77 @@ ModelImporter:
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: TorreInicial(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Planta
+      parentName: TorreInicial(Clone)
+      position: {x: -0.0015203245, y: 0.3186989, z: -0.000691656}
+      rotation: {x: -4.3297806e-17, y: 0.7071068, z: 0.7071068, w: -4.3297806e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: TorreInicial(Clone)
+      position: {x: -0.0002707094, y: -0.007347077, z: -0.0001231134}
+      rotation: {x: -0.7071068, y: 0, z: 8.659561e-17, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+    - name: MASTER
+      parentName: Armature
+      position: {x: -0, y: 0.0025174606, z: 0.00076208904}
+      rotation: {x: 0.9853897, y: 0.0000000737676, z: 0.00000042679775, w: 0.17031465}
+      scale: {x: 1, y: 1.0000004, z: 1.0000004}
+    - name: Vaso
+      parentName: MASTER
+      position: {x: -8.4746134e-11, y: 0.0025174608, z: 0.00009783104}
+      rotation: {x: -0.70710677, y: 0.00000026131312, z: -0.0000008738458, w: 0.7071069}
+      scale: {x: 1, y: 0.9999997, z: 0.9999997}
+    - name: Bandeja.001
+      parentName: Vaso
+      position: {x: -0, y: -0.0006642577, z: -3.010791e-10}
+      rotation: {x: -0.0000005591473, y: 0.7071068, z: 0.70710677, w: 0.0000005591472}
+      scale: {x: 0.01, y: 0.01, z: 0.01}
+    - name: Vaso_end
+      parentName: Vaso
+      position: {x: -0, y: 0.002424968, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Pescoco
+      parentName: MASTER
+      position: {x: 0.000000002015886, y: 0.0025174606, z: -0.0023271367}
+      rotation: {x: -0.70710677, y: 0.00000028378952, z: -0.00000089632243, w: 0.7071069}
+      scale: {x: 1, y: 0.9999997, z: 0.9999997}
+    - name: Bandeja
+      parentName: Pescoco
+      position: {x: -0, y: -0.0030892259, z: -2.8710928e-10}
+      rotation: {x: -0.0000005591472, y: 0.7071068, z: 0.70710677, w: 0.0000005591473}
+      scale: {x: 0.01, y: 0.01, z: 0.01}
+    - name: Cabeca
+      parentName: Pescoco
+      position: {x: -6.7762634e-23, y: 0.0005149659, z: 6.2799553e-22}
+      rotation: {x: -0, y: 2.8421706e-14, z: 1.4210853e-13, w: 1}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: Olhos
+      parentName: Cabeca
+      position: {x: -0.0003218984, y: 0.003651115, z: 0.002560467}
+      rotation: {x: -0.0000008344651, y: -0.00000008053836, z: 1, w: 0.000000043711324}
+      scale: {x: 0.01, y: 0.01, z: 0.01}
+    - name: Boca
+      parentName: Cabeca
+      position: {x: -0.000069678834, y: 0.0027558766, z: 0.0029242772}
+      rotation: {x: 0.021975588, y: 0.15567808, z: 0.98755735, w: -0.0034641768}
+      scale: {x: 0.01, y: 0.01, z: 0.01}
+    - name: Cabelo
+      parentName: Cabeca
+      position: {x: -8.205518e-24, y: 0.005703854, z: 4.91726e-18}
+      rotation: {x: -0.08566231, y: 0.04602387, z: -0.6037968, w: 0.7911848}
+      scale: {x: 0.99999976, y: 1, z: 1.0000001}
+    - name: Cabelo_end
+      parentName: Cabelo
+      position: {x: -0, y: 0.0025865193, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -83,13 +222,14 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
   autoGenerateAvatarMappingIfUnspecified: 1
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
-  avatarSetup: 0
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

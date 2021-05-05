@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e62e26b7138bbf49a2bf9a77e88c6b1, type: 3}
   m_Name: TorreInicial_1
   m_EditorClassIdentifier: 
+  posicao: 0
   proximaEvolucao: {fileID: 11400000, guid: 642bceb71be9f924b80b3c94269a1336, type: 2}
   preco: 30
   descricao: Aumenta a velocidade de tiro em 35%.
   icone: {fileID: -8099042928182358392, guid: 823c326926f43984bb5d4f67c15a8b14, type: 3}
-  cor: {r: 1, g: 0.051886797, b: 0.06136317, a: 1}
+  cor: {r: 0.15686275, g: 0.34117648, b: 1, a: 1}
   atributaoParaEvoluir: 2
   valorDaEvolucao: -0.105

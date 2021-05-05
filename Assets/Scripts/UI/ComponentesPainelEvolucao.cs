@@ -6,6 +6,7 @@ using TMPro;
 
 public class ComponentesPainelEvolucao : MonoBehaviour
 {
+    GUI_Evolucao gui;
     Evolucao evolucao;
     [SerializeField] TextMeshProUGUI preco;
     [SerializeField] TextMeshProUGUI descricao;
@@ -27,15 +28,15 @@ public class ComponentesPainelEvolucao : MonoBehaviour
 
     public void LigarBotao()
     {
-        botao.interactable = true;
+        botao.enabled = true;
     }
 
     public void DesligarBotao()
     {
-        botao.interactable = false;
+        botao.enabled = false;
     }
 
-    public void SetarEvolucao(Evolucao evolucao)
+    public void SetarEvolucao(Evolucao evolucao, GUI_Evolucao gui)
     {
         this.evolucao = evolucao;
         preco.text = evolucao.GetPreco().ToString();
@@ -44,6 +45,7 @@ public class ComponentesPainelEvolucao : MonoBehaviour
         icon.SetNativeSize();
         Cell.color = evolucao.GetCor();
         botao.onClick.AddListener(Evoluir);
+        this.gui = gui;
     }
 
     public void Evoluir()
@@ -59,6 +61,7 @@ public class ComponentesPainelEvolucao : MonoBehaviour
         evolucao.Evoluir();
         C_Fase.instancia.RetirarDinheiro(evolucao.GetPreco());
         Destroy(gameObject);
+        gui.AtualizarPainelDeEvolucoes();
     }
 
 }

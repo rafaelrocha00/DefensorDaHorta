@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e62e26b7138bbf49a2bf9a77e88c6b1, type: 3}
   m_Name: TorreInicial_1B
   m_EditorClassIdentifier: 
+  posicao: 1
   proximaEvolucao: {fileID: 0}
   preco: 200
   descricao: Aumenta a velocidade de tiro em 50%.

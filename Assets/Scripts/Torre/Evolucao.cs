@@ -5,6 +5,7 @@ using UnityEngine;
 public class Evolucao : ScriptableObject
 {
     protected Torre_Objeto torreAssociada;
+    [SerializeField] int posicao = 0;
     [SerializeField] Evolucao proximaEvolucao;
     [SerializeField] float preco;
     [SerializeField] string descricao;
@@ -48,5 +49,10 @@ public class Evolucao : ScriptableObject
     public void SetarTorreAEvoluir(Torre_Objeto torre)
     {
         torreAssociada = torre;
+    }
+
+    public int GetPosicao()
+    {
+        return posicao;
     }
 }

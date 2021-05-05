@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e62e26b7138bbf49a2bf9a77e88c6b1, type: 3}
   m_Name: TorreInicial_2
   m_EditorClassIdentifier: 
+  posicao: 1
   proximaEvolucao: {fileID: 11400000, guid: 50830e33d7e558f45b03c0f9c154ede9, type: 2}
   preco: 20
   descricao: Aumenta o alcance em 50%.

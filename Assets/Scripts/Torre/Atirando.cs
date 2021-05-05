@@ -5,9 +5,9 @@ using System;
 
 public class Atirando : EventoTorre
 {
+    AtirarBasico tiro;
     bool EstaRecarregando = false;
     float TempoDeRecarga;
-    bool girando;
 
     public override bool Checar(Torre_Objeto objetoAtuante)
     {
@@ -22,7 +22,11 @@ public class Atirando : EventoTorre
             GameObject inimigo = EncontrarODaFrente(Colisores);
             Olhar(objetoAtuante, inimigo.transform);
             Atirar(objetoAtuante, inimigo.transform.position);
+            return;
         }
+
+        ChecarTiro(objetoAtuante);
+        tiro.PararDeAtirar();
 
     }
 
@@ -69,20 +73,34 @@ public class Atirando : EventoTorre
         depois?.Invoke();
     }
 
+    public void AtualizarRecarga()
+    {
+        TempoDeRecarga -= Time.deltaTime;
+        if (TempoDeRecarga <= 0)
+        {
+            EstaRecarregando = false;
+            TempoDeRecarga = 0;
+        }
+    }
+
+    public void ChecarTiro(Torre_Objeto objetoAtuante)
+    {
+        if (tiro == null)
+        {
+            tiro = objetoAtuante.GetComponent<AtirarBasico>();
+        }
+    }
+
     public void Atirar(Torre_Objeto objetoAtuante, Vector3 pos)
     {
         if (EstaRecarregando)
         {
-            TempoDeRecarga -= Time.deltaTime;
-            if (TempoDeRecarga <= 0)
-            {
-                EstaRecarregando = false;
-                TempoDeRecarga = 0;
-            }
             return;
         }
 
-        objetoAtuante.Atirar(pos);
+        ChecarTiro(objetoAtuante);
+
+        tiro.Atirar(pos);
         EstaRecarregando = true;
         TempoDeRecarga = objetoAtuante.GetTempoDeRecarga();
     }

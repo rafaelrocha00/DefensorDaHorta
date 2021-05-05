@@ -111,6 +111,6 @@ MonoBehaviour:
   Target: {x: 0, y: 0, z: 0}
   Dir: {x: 0, y: 0, z: 0}
   Velocidade: 1
-  Dano: 10
+  Dano: 7
   DistanciaMax: 30
   tempoMaxvida: 30

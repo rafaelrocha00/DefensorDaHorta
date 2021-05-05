@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class GUI_Evolucao : MonoBehaviour
 {
     [SerializeField] Torre_Objeto selecionado;
@@ -13,7 +13,7 @@ public class GUI_Evolucao : MonoBehaviour
     {
         C_Input input = C_Jogo.instancia.GetComponent<C_Input>();
         input.ObjetoSelecionado += ChecarObjetoSelecionado;
-        input.NadaSelecionado += FecharPainel;
+        input.NadaSelecionado += LimparPainel;
     }
 
     public void ChecarObjetoSelecionado(GameObject objeto)
@@ -27,7 +27,7 @@ public class GUI_Evolucao : MonoBehaviour
 
     }
 
-    public void FecharPainel()
+    public void LimparPainel()
     {
         if (evolucoesAbertas.Count == 0) return;
         for (int i = 0; i < evolucoesAbertas.Count; i++)
@@ -42,26 +42,28 @@ public class GUI_Evolucao : MonoBehaviour
     {
         if (painelDeEvolucoes == null) return;
 
-        if(selecionado != null)
-        {
-            selecionado.EvolucaoAdicionada -= InstanciarEvolucao;
-        }
+        LimparPainel();
         selecionado = torre;
-        selecionado.EvolucaoAdicionada += InstanciarEvolucao;
-
         painelDeEvolucoes.SetActive(true);
-        FecharPainel();
+
+
         for (int i = 0; i < torre.GetQuantidadeDeEvolucoes(); i++)
         {
             InstanciarEvolucao(torre.GetEvolucao(i));
         }
     }
 
+    public void AtualizarPainelDeEvolucoes()
+    {
+        AbrirPainelDeEvolucoes(selecionado);
+    }
+
     public void InstanciarEvolucao(Evolucao evolucao)
     {
         GameObject botao = Instantiate(BotaoEvolucao, painelDeEvolucoes.transform);
         evolucoesAbertas.Add(botao);
+        botao.transform.SetSiblingIndex(evolucao.GetPosicao());
         ComponentesPainelEvolucao refe = botao.GetComponent<ComponentesPainelEvolucao>();
-        refe.SetarEvolucao(evolucao);
+        refe.SetarEvolucao(evolucao, this);
     }
 }

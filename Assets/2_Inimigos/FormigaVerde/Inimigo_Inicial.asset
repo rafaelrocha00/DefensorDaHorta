@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Inimigo_Inicial
   m_EditorClassIdentifier: 
   velocidade: 1.4
-  vidaTotal: 20
+  vidaTotal: 15
   dano: 5
   dinheiroGanho: 20
   inimigo: {fileID: 1310958278460494648, guid: d62923fa612d4ce4295371fb560bd6f3, type: 3}

@@ -20,10 +20,7 @@ public class Torre_Objeto : MonoBehaviour
     float bonusDeVelocidade;
     float bonusDeRecarga;
 
-    public Action<Evolucao> EvolucaoAdicionada;
-
-    [SerializeField]private GameObject PontoDeTiro;
-
+    public Action<Torre_Objeto> EvolucaoAdicionada;
 
     private void Start()
     {
@@ -50,12 +47,9 @@ public class Torre_Objeto : MonoBehaviour
         }
     }
 
-    public void Atirar(Vector3 Target)
+    public GameObject GetProjetil()
     {
-        Projetil projetil = Instantiate(torreUsada.Bala, PontoDeTiro.transform.position, Quaternion.identity).GetComponent<Projetil>();
-        projetil.Target = Target;
-        projetil.Dano += bonusDeDano;
-        projetil.Velocidade += bonusDeVelocidade;
+        return torreUsada.Bala;
     }
 
 
@@ -91,6 +85,15 @@ public class Torre_Objeto : MonoBehaviour
         return torreUsada.GetDano() + bonusDeDano;
     }
 
+    public float GetBonusDeVelocidade()
+    {
+        return bonusDeVelocidade;
+    }
+
+    public float GetBonusDeDano()
+    {
+        return bonusDeDano;
+    }
     public void AumentarDano(float bonus)
     {
         bonusDeDano += bonus;
@@ -123,10 +126,22 @@ public class Torre_Objeto : MonoBehaviour
         return evolucoesIniciais.Count;
     }
 
+    public void EvoluirEMudarDeLevel()
+    {
+        for (int i = 0; i < evolucoesIniciais.Count; i++)
+        {
+            Evolucao ev = evolucoesIniciais[i];
+            evolucoesIniciais.Add(ev.GetEvolucao());
+            evolucoesIniciais.Remove(ev);
+        }
+
+        EvolucaoAdicionada?.Invoke(this);
+    }
+
     public void AdicionarEvolucao(Evolucao evolucao)
     {
         evolucoesIniciais.Add(evolucao);
-        EvolucaoAdicionada?.Invoke(evolucao);
+        EvolucaoAdicionada?.Invoke(this);
     }
 
     public void RetirarEvolucao(Evolucao evolucao)

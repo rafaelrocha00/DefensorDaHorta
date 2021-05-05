@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18187469, g: 0.22755252, b: 0.3074184, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1074,13 +1074,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501686285}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalRotation: {x: -0.92800784, y: 0.012309881, z: -0.030784694, w: -0.3710827}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 136.41, y: -363.8, z: 0}
 --- !u!1 &601238292
 GameObject:
   m_ObjectHideFlags: 0
@@ -1252,7 +1252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Menu: {fileID: 309231065}
-  TorreAssociada: {fileID: 5763122669678558351, guid: f5ac7e2fd96629246a840c80c28521b6,
+  TorreAssociada: {fileID: 6469377023710298469, guid: 8b4bf0c3cc567534ba6587559d3ee401,
     type: 3}
   Descricao: "Se parece com uma melancia, mas na verdade \xE9 um picles."
   padrao: 0
@@ -2311,7 +2311,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Menu: {fileID: 309231065}
-  TorreAssociada: {fileID: 3245757564125831985, guid: 600f158fba79e3b419c5c0432a06552f,
+  TorreAssociada: {fileID: 6132876577146032149, guid: bff6752f514d7f84d9c8b90351fc538a,
     type: 3}
   Descricao: "Essa c\xE9noura \xE9 um fracasso na vida, mas \xE9 \xFAtil no combate."
   padrao: 0
@@ -3977,9 +3977,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Menu: {fileID: 309231065}
-  TorreAssociada: {fileID: 7777817892217123017, guid: 3256f9c4b303f3b4099235c6fa3ad250,
+  TorreAssociada: {fileID: 2828410130758108080, guid: c7780f3738cf7da4a817ca7f14f1479b,
     type: 3}
-  Descricao: "N\xE3o o olhe diretamente, beringelas s\xE3o muito senseiveis."
+  Descricao: "N\xE3o o olhe diretamente, beringelas s\xE3o muito sensiveis."
   padrao: 0
 --- !u!114 &1770451926
 MonoBehaviour:
@@ -4687,7 +4687,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Menu: {fileID: 309231065}
-  TorreAssociada: {fileID: 6042774032506571989, guid: 0da112576f53220479ec406a76b886f7,
+  TorreAssociada: {fileID: 2194683568540034557, guid: bebdaee298081e74f99447dc4db29bbe,
     type: 3}
   Descricao: "Essa abomina\xE7\xE3o sofreu tantas muta\xE7\xF5es que ningu\xE9m sabe
     o que \xE9.  "

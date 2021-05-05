@@ -1,11 +1,14 @@
 fileFormatVersion: 2
-guid: f8cde7ce9deeeb54f82ae54cc93ee079
+guid: 460c17bd55251d3449eb53834b99955f
 ModelImporter:
-  serializedVersion: 26
-  internalIDToNameTable: []
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: -8945691123924629249
+    second: Armature|Idle
   externalObjects: {}
   materials:
-    importMaterials: 0
+    materialImportMode: 2
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -23,14 +26,43 @@ ModelImporter:
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
     importConstraints: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Armature|Idle
+      takeName: Armature|Idle
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 23
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -43,11 +75,13 @@ ModelImporter:
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
     preserveHierarchy: 0
     skinWeightsMode: 0
     maxBonesPerVertex: 4
@@ -57,6 +91,9 @@ ModelImporter:
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -69,11 +106,60 @@ ModelImporter:
     normalSmoothingSource: 0
   referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
     serializedVersion: 3
     human: []
-    skeleton: []
+    skeleton:
+    - name: Picles(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Picles
+      parentName: Picles(Clone)
+      position: {x: -0.0000047851354, y: 0.39362612, z: -0.04546879}
+      rotation: {x: -4.3297806e-17, y: 0.7071068, z: 0.7071068, w: -4.3297806e-17}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Armature
+      parentName: Picles(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: 8.659561e-17, w: 0.7071068}
+      scale: {x: 100, y: 100, z: 100}
+    - name: MASTER
+      parentName: Armature
+      position: {x: 2.9632308e-10, y: 0.0021681758, z: -0.00006113278}
+      rotation: {x: 0.8627977, y: 0.00000000784384, z: 0.000000111358645, w: 0.5055493}
+      scale: {x: 1, y: 1.0000001, z: 1.0000001}
+    - name: Rotacao
+      parentName: MASTER
+      position: {x: -1.716681e-10, y: 0.0016947704, z: -0.00010618295}
+      rotation: {x: -0.47122392, y: 0.00000032771095, z: -0.00000037510003, w: 0.8820137}
+      scale: {x: 1, y: 0.9999999, z: 0.9999999}
+    - name: Cabeca
+      parentName: Rotacao
+      position: {x: -1.7763568e-17, y: 0.0006633274, z: -4.698325e-16}
+      rotation: {x: -0, y: -0.000000055636242, z: -0.00000008742285, w: 1}
+      scale: {x: 1.140164, y: 0.92140603, z: 1.1401641}
+    - name: Olhos
+      parentName: Cabeca
+      position: {x: 0.000114045986, y: 0.004376041, z: 0.003762482}
+      rotation: {x: -0.00000035762787, y: -0.000000081460406, z: 1, w: -0.00000004371142}
+      scale: {x: 0.008055091, y: 0.008055091, z: 0.008055091}
+    - name: Boca
+      parentName: Cabeca
+      position: {x: 0.00011404575, y: 0.0038864112, z: 0.0040836777}
+      rotation: {x: -0.00000035967443, y: 0.063153036, z: 0.99800384, w: -0.000000021038854}
+      scale: {x: 0.008055091, y: 0.008055091, z: 0.008055091}
+    - name: Folhas
+      parentName: Cabeca
+      position: {x: -0.00025096347, y: 0.003483285, z: -0.00009832203}
+      rotation: {x: -0.00000022197246, y: 0.7071068, z: 0.70710677, w: 0.00000022197248}
+      scale: {x: 0.01, y: 0.01, z: 0.01}
+    - name: Cabeca_end
+      parentName: Cabeca
+      position: {x: -0, y: 0.0068969987, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     armTwist: 0.5
     foreArmTwist: 0.5
     upperLegTwist: 0.5
@@ -84,11 +170,14 @@ ModelImporter:
     globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
-    hasExtraRoot: 0
+    hasExtraRoot: 1
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

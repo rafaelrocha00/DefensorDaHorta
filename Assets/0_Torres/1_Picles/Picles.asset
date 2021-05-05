@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Picles
   m_EditorClassIdentifier: 
   Raio: 5
-  TempoDeRecarga: 0.5
+  TempoDeRecarga: 0.8
   Bala: {fileID: 8662161473038319481, guid: ff72efe869c9e2f44a35a64af503ef81, type: 3}
