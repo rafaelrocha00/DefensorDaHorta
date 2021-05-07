@@ -534,6 +534,10 @@ GameObject:
   - component: {fileID: 8510340298570337699}
   - component: {fileID: 508119516442541385}
   - component: {fileID: 380272733415648142}
+  - component: {fileID: 2454373382735061013}
+  - component: {fileID: -5181854523017027548}
+  - component: {fileID: -4133356386026085217}
+  - component: {fileID: 4150383941416226942}
   m_Layer: 0
   m_Name: Picles
   m_TagString: Untagged
@@ -589,16 +593,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TorreAssociada: {fileID: 11400000, guid: cbdc322681ec3b74fa9c18a4a11c1bfb, type: 2}
-  anim: {fileID: 2841868949048176683}
   Render:
   - {fileID: 723587941794789916}
   - {fileID: 3957322344848271398}
   - {fileID: 258155124493265530}
   - {fileID: 1106234587008194197}
   Rotacao: {fileID: 2302075490702704902}
-  evolucoesIniciais:
-  - {fileID: 11400000, guid: d9ade4304eac60f41970ae32ad81e76e, type: 2}
-  - {fileID: 11400000, guid: 612c98a99a6b40f40abdce04e25fa409, type: 2}
 --- !u!65 &8510340298570337701
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -675,3 +675,54 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PontoDeTiro: {fileID: 8510340298114506105}
+--- !u!114 &2454373382735061013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8852850605022458091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88f0ca551578a14dbbd92536050f471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-5181854523017027548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8852850605022458091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41b5b3b78deeb4542a5bc981a3c0747c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-4133356386026085217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8852850605022458091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301bff86d0c757145bcb858cc1561dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evolucoesIniciais:
+  - {fileID: 11400000, guid: d9ade4304eac60f41970ae32ad81e76e, type: 2}
+  - {fileID: 11400000, guid: 612c98a99a6b40f40abdce04e25fa409, type: 2}
+--- !u!114 &4150383941416226942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8852850605022458091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47ad18fcec0d24488fddc614d7e051b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

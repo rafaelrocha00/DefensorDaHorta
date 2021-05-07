@@ -218,6 +218,10 @@ GameObject:
   - component: {fileID: 919132147771569520}
   - component: {fileID: 919132147771569523}
   - component: {fileID: 4759020659210636621}
+  - component: {fileID: -1056171459342219234}
+  - component: {fileID: 537598115027255648}
+  - component: {fileID: 3100126540073950955}
+  - component: {fileID: 3186873958387876097}
   m_Layer: 0
   m_Name: Cenoura
   m_TagString: Untagged
@@ -273,16 +277,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TorreAssociada: {fileID: 11400000, guid: 9b3cb0ec57665214bbd3ac9375209dc3, type: 2}
-  anim: {fileID: 8265740858130581712}
   Render:
   - {fileID: 4288966057348332755}
   - {fileID: 1670300937610609847}
   - {fileID: 2029604980122459336}
   - {fileID: 864209876364388928}
   Rotacao: {fileID: 5347754296366807549}
-  evolucoesIniciais:
-  - {fileID: 11400000, guid: 83886552c3cc7ea4990b99abd8644d64, type: 2}
-  - {fileID: 11400000, guid: 80b72f9fa3546314f9981803b7be7027, type: 2}
 --- !u!114 &919132147771569522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -360,6 +360,57 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PontoDeTiro: {fileID: 2584883863578730140}
+--- !u!114 &-1056171459342219234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3395208328010516496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f88f0ca551578a14dbbd92536050f471, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &537598115027255648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3395208328010516496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41b5b3b78deeb4542a5bc981a3c0747c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3100126540073950955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3395208328010516496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 301bff86d0c757145bcb858cc1561dc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  evolucoesIniciais:
+  - {fileID: 11400000, guid: 83886552c3cc7ea4990b99abd8644d64, type: 2}
+  - {fileID: 11400000, guid: 80b72f9fa3546314f9981803b7be7027, type: 2}
+--- !u!114 &3186873958387876097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3395208328010516496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b47ad18fcec0d24488fddc614d7e051b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3823603931154236185
 GameObject:
   m_ObjectHideFlags: 0

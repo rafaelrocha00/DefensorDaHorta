@@ -41,7 +41,6 @@ public class OpcaoDeVelocidade : MonoBehaviour
 
     public void MudarVelocidade()
     {
-        Debug.Log("Mudar velocidade chamado");
         selecionado?.Invoke(this);
         Time.timeScale = velocidade;
     }

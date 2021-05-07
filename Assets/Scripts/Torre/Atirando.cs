@@ -6,8 +6,15 @@ using System;
 public class Atirando : EventoTorre
 {
     AtirarBasico tiro;
+    Torre_Rotacao rotacao;
     bool EstaRecarregando = false;
     float TempoDeRecarga;
+
+    public override void Setar(Torre_Objeto objetoAtuante)
+    {
+        tiro = objetoAtuante.GetComponent<AtirarBasico>();
+        rotacao = objetoAtuante.GetComponent<Torre_Rotacao>();
+    }
 
     public override bool Checar(Torre_Objeto objetoAtuante)
     {
@@ -16,16 +23,17 @@ public class Atirando : EventoTorre
 
     public override void Agir(Torre_Objeto objetoAtuante)
     {
+        AtualizarRecarga();
+
         Collider[] Colisores = Physics.OverlapSphere(objetoAtuante.transform.position, objetoAtuante.GetRaio(), C_Jogo.instancia.Inimigos);
         if (Colisores.Length != 0)
         {
             GameObject inimigo = EncontrarODaFrente(Colisores);
-            Olhar(objetoAtuante, inimigo.transform);
+            rotacao.Olhar(objetoAtuante, inimigo.transform);
             Atirar(objetoAtuante, inimigo.transform.position);
             return;
         }
 
-        ChecarTiro(objetoAtuante);
         tiro.PararDeAtirar();
 
     }
@@ -51,28 +59,6 @@ public class Atirando : EventoTorre
         return inimigos[inimigoAFrente].gameObject;
     }
 
-    public void Olhar(Torre_Objeto objetoAtuante, Transform PosicaoInimigo)
-    {
-        Transform Objeto = objetoAtuante.GetCabeca().transform;
-
-        Vector3 Direcao = (PosicaoInimigo.position - Objeto.position).normalized;
-        Direcao.y = 0f;
-        Quaternion RotacaoLook = Quaternion.LookRotation(Direcao);
-        Objeto.rotation = Quaternion.Slerp(Objeto.rotation, RotacaoLook, Time.deltaTime * 5f);
-    }
-
-    public IEnumerator PararDeOlhar(Transform cabeca, Quaternion atual, Quaternion natural, Action depois)
-    {
-        float contador = 0;
-        while(contador < 1f)
-        {
-            cabeca.rotation = Quaternion.Lerp(atual, natural, contador);
-            contador += Time.deltaTime;
-            yield return new WaitForEndOfFrame();
-        }
-        depois?.Invoke();
-    }
-
     public void AtualizarRecarga()
     {
         TempoDeRecarga -= Time.deltaTime;
@@ -83,22 +69,13 @@ public class Atirando : EventoTorre
         }
     }
 
-    public void ChecarTiro(Torre_Objeto objetoAtuante)
-    {
-        if (tiro == null)
-        {
-            tiro = objetoAtuante.GetComponent<AtirarBasico>();
-        }
-    }
-
     public void Atirar(Torre_Objeto objetoAtuante, Vector3 pos)
     {
         if (EstaRecarregando)
         {
+            Debug.Log("Carregando tiro");
             return;
         }
-
-        ChecarTiro(objetoAtuante);
 
         tiro.Atirar(pos);
         EstaRecarregando = true;

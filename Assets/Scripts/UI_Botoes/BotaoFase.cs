@@ -10,6 +10,8 @@ public class BotaoFase : MonoBehaviour
     public string NomeDaFase;
     [SerializeField] SelecaoDeFases selector;
     public Sprite imagemFase;
+    public Sprite FaseBloqueada;
+    public Sprite FaseAberta;
     Color corNormal;
     Image icon;
     [SerializeField] bool padrao = false;
@@ -53,6 +55,11 @@ public class BotaoFase : MonoBehaviour
     public void Selecionar()
     {
         icon.color = selector.corSelecionado;
+    }
+
+    public void LiberarFase()
+    {
+
     }
 
 

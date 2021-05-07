@@ -29,7 +29,6 @@ public class GUI_Torre : MonoBehaviour
 
     void DesenharRaio()
     {
-        Debug.Log("Desenhando raio");
         int Segmentos = 360;
         Line.useWorldSpace = false;
         Line.startWidth = Largura;

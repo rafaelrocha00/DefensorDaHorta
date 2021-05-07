@@ -6,6 +6,11 @@ public class Construcao : EventoTorre
 {
     List<Renderer> render;
 
+    public override void Setar(Torre_Objeto objetoAtuante)
+    {
+        render = objetoAtuante.Render;
+    }
+
     public override bool Checar(Torre_Objeto objetoAtuante)
     {
         return true;
@@ -22,11 +27,6 @@ public class Construcao : EventoTorre
             if (Hit.collider != null)
             {
                 objetoAtuante.gameObject.transform.position = Hit.point;
-
-                if (render == null)
-                {
-                    render = objetoAtuante.GetComponent<Torre_Objeto>().Render;
-                }
 
                 if (Hit.collider.gameObject.CompareTag("TerrenoAcessivel"))
                 {
@@ -49,7 +49,7 @@ public class Construcao : EventoTorre
                         objetoAtuante.gameObject.layer = LayerMask.NameToLayer("Chao");
                         C_Jogo.instancia.GetComponent<C_Input>().podeSelecionar = true;
 
-                        objetoAtuante.EventoAtual = new Atirando();
+                        objetoAtuante.GetComponent<Torre_Eventos>().MudarEventoAtual(new Atirando());
                     }
                 }
                 else

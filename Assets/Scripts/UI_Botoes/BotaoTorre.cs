@@ -24,8 +24,8 @@ public class BotaoTorre : MonoBehaviour, IPointerEnterHandler
     {
         if (C_Fase.instancia.RetirarDinheiro(Preco))
         {
-            Torre_Objeto TorreInvocada = Instantiate(TorreAssociada, Vector3.zero, TorreAssociada.transform.rotation).GetComponent<Torre_Objeto>();
-            TorreInvocada.EventoAtual = new Construcao();
+            Torre_Eventos TorreInvocada = Instantiate(TorreAssociada, Vector3.zero, TorreAssociada.transform.rotation).GetComponent<Torre_Eventos>();
+            TorreInvocada.MudarEventoAtual(new Construcao());
         }
        
     }

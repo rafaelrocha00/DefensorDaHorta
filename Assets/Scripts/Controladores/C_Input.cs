@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityExtensoes;
 
 public class C_Input : MonoBehaviour
 {
@@ -24,8 +25,7 @@ public class C_Input : MonoBehaviour
 
             if (Physics.Raycast(Raio, out Hit, 100f))
             {
-                Iinteragivel interagivel = FindInterface<Iinteragivel>(Hit.collider.gameObject) as Iinteragivel;
-                Debug.Log(Hit.collider.gameObject.name);
+                Iinteragivel interagivel = Hit.collider.gameObject.GetInterface<Iinteragivel>();
                 if (interagivel != null)
                 {
                     if (Selecionado != null && Selecionado != interagivel)
@@ -53,15 +53,6 @@ public class C_Input : MonoBehaviour
 
     }
 
-    public MonoBehaviour FindInterface<T>(GameObject objeto)
-    {
-        MonoBehaviour[] mono = objeto.GetComponents<MonoBehaviour>();
-        for (int i = 0; i < mono.Length; i++)
-        {
-            if (mono[i] is T) return mono[i];
-        }
 
-        return null;
-    }
 
 }

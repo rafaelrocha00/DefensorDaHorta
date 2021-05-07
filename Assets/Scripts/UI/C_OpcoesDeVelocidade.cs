@@ -23,6 +23,5 @@ public class C_OpcoesDeVelocidade : MonoBehaviour
         }
 
         opcao.Ativar();
-        Debug.Log("Desativando opcoes");
     }
 }

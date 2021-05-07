@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityExtensoes;
 
 [CreateAssetMenu(fileName = "Torre", menuName = "Torre")]
 public class Torre: ScriptableObject
@@ -8,15 +9,15 @@ public class Torre: ScriptableObject
     public float Raio;
     public float TempoDeRecarga;
     public GameObject Bala;
-    Projetil projetil;
+    IAtiravel bala;
     public float GetDano()
     {
-        if(projetil == null)
+        if(bala == null)
         {
-            projetil = Bala.GetComponent<Projetil>();
+            bala = Bala.GetInterface<IAtiravel>();
         }
 
-        return projetil.Dano;
+        return bala.GetDano();
     }
 
 }

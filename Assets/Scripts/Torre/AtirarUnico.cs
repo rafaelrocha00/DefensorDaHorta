@@ -5,13 +5,16 @@ using UnityEngine;
 public class AtirarUnico : AtirarBasico
 {
     bool atirando;
+    [SerializeField] Transform cabeca;
 
     public override void Atirar(Vector3 Target)
     {
         if (!atirando)
         {
-            base.Atirar(Target);
+           base.Atirar(Target);
+            Debug.Log("Atirando apenas uma vez");
         }
+
         atirando = true;
     }
 

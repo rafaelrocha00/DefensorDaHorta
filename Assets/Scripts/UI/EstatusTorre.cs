@@ -16,7 +16,6 @@ public class EstatusTorre : MonoBehaviour
 
     public void Atualizar(Torre_Objeto torre)
     {
-        Debug.Log("Atualizando");
         dano.text = "Dano: ";
         dano.text += torre.GetDano().ToString();
         alcance.text = "Alcance: ";

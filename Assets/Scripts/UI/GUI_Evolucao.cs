@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class GUI_Evolucao : MonoBehaviour
 {
-    [SerializeField] Torre_Objeto selecionado;
+    [SerializeField] Torre_Evolucao selecionado;
     [SerializeField] GameObject painelDeEvolucoes;
     [SerializeField] GameObject BotaoEvolucao;
     List<GameObject> evolucoesAbertas = new List<GameObject>();
@@ -18,7 +18,7 @@ public class GUI_Evolucao : MonoBehaviour
 
     public void ChecarObjetoSelecionado(GameObject objeto)
     {
-        Torre_Objeto torre = objeto.GetComponent<Torre_Objeto>();
+        Torre_Evolucao torre = objeto.GetComponent<Torre_Evolucao>();
 
         if(torre != null && torre != selecionado)
         {
@@ -38,7 +38,7 @@ public class GUI_Evolucao : MonoBehaviour
         selecionado = null;
     }
 
-    public void AbrirPainelDeEvolucoes(Torre_Objeto torre)
+    public void AbrirPainelDeEvolucoes(Torre_Evolucao torre)
     {
         if (painelDeEvolucoes == null) return;
 

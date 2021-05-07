@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projetil : MonoBehaviour
+public class Projetil : MonoBehaviour, IAtiravel
 {
-    public Vector3 Target;
-    public Vector3 Dir;
-    public float Velocidade;
-    public float Dano;
-    public float DistanciaMax;
-    public float tempoMaxvida;
+     Vector3 Target;
+     Vector3 Dir;
+    [SerializeField] float Velocidade;
+    [SerializeField] float Dano;
+    [SerializeField] float DistanciaMax;
+    [SerializeField] float tempoMaxvida;
 
     private void Start()
     {
@@ -28,12 +28,18 @@ public class Projetil : MonoBehaviour
         }
     }
 
+    public void SetarTiro(Transform origem, Vector3 target, float bonusDano, float bonusVelocidade)
+    {
+        this.Target = target;
+        Dano += bonusDano;
+        Velocidade += bonusVelocidade;
+    }
+
+
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Colediu");
         if(other.tag == "Inimigo")
         {
-            Debug.Log("Acertou inimigo");
             Inimigo_Objeto inimigo = other.gameObject.GetComponent<Inimigo_Objeto>();
             inimigo.LevarDano(Dano, true, Dir, transform.position);
             Destroy(this.gameObject);
@@ -52,7 +58,8 @@ public class Projetil : MonoBehaviour
 
     }
 
-
-
-
+    public float GetDano()
+    {
+        return Dano;
+    }
 }

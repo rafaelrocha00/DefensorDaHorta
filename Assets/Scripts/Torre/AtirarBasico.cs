@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityExtensoes;
 
 public class AtirarBasico : MonoBehaviour
 {
@@ -14,10 +15,10 @@ public class AtirarBasico : MonoBehaviour
 
     public virtual void Atirar(Vector3 Target)
     {
-        Projetil projetil = Instantiate(torre.GetProjetil(), PontoDeTiro.transform.position, Quaternion.identity).GetComponent<Projetil>();
-        projetil.Target = Target;
-        projetil.Dano += torre.GetBonusDeDano();
-        projetil.Velocidade += torre.GetBonusDeVelocidade();
+        Debug.Log("Atirando");
+        GameObject tiro = Instantiate(torre.GetProjetil(), PontoDeTiro.transform.position, Quaternion.identity);
+        IAtiravel projetil = tiro.GetInterface<IAtiravel>();
+        projetil.SetarTiro(PontoDeTiro.transform, Target, torre.GetBonusDeDano(), torre.GetBonusDeVelocidade());
     }
 
     public virtual void PararDeAtirar()

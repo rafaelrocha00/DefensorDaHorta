@@ -5,6 +5,7 @@ using UnityEngine;
 public class Evolucao : ScriptableObject
 {
     protected Torre_Objeto torreAssociada;
+    Torre_Evolucao C_Evolucao;
     [SerializeField] int posicao = 0;
     [SerializeField] Evolucao proximaEvolucao;
     [SerializeField] float preco;
@@ -14,10 +15,10 @@ public class Evolucao : ScriptableObject
 
     public virtual void Evoluir()
     {
-        torreAssociada.RetirarEvolucao(this);
+        C_Evolucao.RetirarEvolucao(this);
         if(proximaEvolucao != null)
         {
-            torreAssociada.AdicionarEvolucao(proximaEvolucao);
+            C_Evolucao.AdicionarEvolucao(proximaEvolucao);
         }
     }
 
@@ -46,9 +47,10 @@ public class Evolucao : ScriptableObject
         return icone;
     }
 
-    public void SetarTorreAEvoluir(Torre_Objeto torre)
+    public void SetarTorreAEvoluir(Torre_Evolucao C_Evolucao,Torre_Objeto torreAssociada)
     {
-        torreAssociada = torre;
+        this.torreAssociada = torreAssociada;
+        this.C_Evolucao = C_Evolucao;
     }
 
     public int GetPosicao()

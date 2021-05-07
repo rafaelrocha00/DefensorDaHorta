@@ -37,7 +37,6 @@ public class ExpressaoAnimada : MonoBehaviour
                 yield return new WaitForSeconds(tempoEntreExpressoes);
             }
 
-
             expressao.material.SetFloat("_ColunaDesejada", indexX);
             yield return new WaitForSeconds(duracaoDeCadaExpressao);
 
@@ -49,7 +48,6 @@ public class ExpressaoAnimada : MonoBehaviour
             {
                 indexX++;
             }
-
         }
     }
 }

@@ -58,7 +58,6 @@ public class Inimigo_Objeto: MonoBehaviour
         float distancia = Vector3.Distance(transform.position, waypointAtual.Position);
         if (distancia <= C_Jogo.instancia.OfssetInimigo)
         {
-            Debug.Log("Encontrou novo Waypoint");
             waypointAtual = waypointAtual.GetNovoWaypoint();
         }
     }
@@ -71,21 +70,20 @@ public class Inimigo_Objeto: MonoBehaviour
 
         if (Direcao != Vector3.zero)
         {
-            Instantiate(ParticulaDano, Posicao,Quaternion.LookRotation(-Direcao));
+            Instantiate(ParticulaDano, Posicao, Quaternion.LookRotation(-Direcao));
         }
         StartCoroutine(MudarCor(CorDano, 1f));
         Camera.AdicionarNoise(0.05f, 0.3f);
-  
-        if (vidaAtual <= 0)
+
+        if (vidaAtual > 0) return;
+
+        if (ganharDinheiro)
         {
-            if (ganharDinheiro)
-            {
-                C_Fase.instancia.AcidionarDinheiro(DinheiroGanho);
-            }
-            Morreu?.Invoke(this);
-            Destroy(this.gameObject);
-            C_Audio.audio.PlayAudioMorte();
+            C_Fase.instancia.AcidionarDinheiro(DinheiroGanho);
         }
+        Morreu?.Invoke(this);
+        Destroy(this.gameObject);
+        C_Audio.audio.PlayAudioMorte();
 
     }
 
@@ -95,12 +93,12 @@ public class Inimigo_Objeto: MonoBehaviour
         {
             yield break;
         }
+
         Render.materials[MaterialBase].SetColor("_Color", cor);
         //velocidade -= 0.5f;
         yield return tempo;
         Render.materials[MaterialBase].SetColor("_Color", corBase);
         //velocidade += 0.5f;
-        Debug.Log("Mudando cor");
     }
 
     private void OnTriggerEnter(Collider other)

@@ -6,31 +6,24 @@ using UnityEngine.Animations;
 public class Torre_Objeto : MonoBehaviour
 {
     [SerializeField] Torre TorreAssociada;
-    [SerializeField] Animator anim;
     Torre torreUsada;
-    public EventoTorre EventoAtual;
 
     //Selecao
     public List<Renderer> Render = new List<Renderer>();
     [SerializeField] Transform Rotacao;
 
-    [SerializeField] List<Evolucao> evolucoesIniciais = new List<Evolucao>();
     float bonusDeDano;
     float bonusDeAlcance;
     float bonusDeVelocidade;
     float bonusDeRecarga;
 
-    public Action<Torre_Objeto> EvolucaoAdicionada;
 
     private void Start()
     {
-        if (torreUsada == null)
-        {
-            CriarInstancaiDeTorre();
-        }
+        ChecarTorre();
     }
 
-    void CriarInstancaiDeTorre()
+    void CriarInstanciaDeTorre()
     {
         torreUsada = (Torre)ScriptableObject.CreateInstance(typeof(Torre));
         torreUsada.Bala = TorreAssociada.Bala;
@@ -39,19 +32,10 @@ public class Torre_Objeto : MonoBehaviour
         torreUsada.Bala = TorreAssociada.Bala;
     }
 
-    private void Update()
-    {
-        if ((EventoAtual != null)&&(EventoAtual.Checar(this)))
-        {
-            EventoAtual.Agir(this);
-        }
-    }
-
     public GameObject GetProjetil()
     {
         return torreUsada.Bala;
     }
-
 
     private void OnDrawGizmos()
     {
@@ -63,7 +47,7 @@ public class Torre_Objeto : MonoBehaviour
     {
         if (torreUsada == null)
         {
-            CriarInstancaiDeTorre();
+            CriarInstanciaDeTorre();
         }
     }
 
@@ -115,56 +99,8 @@ public class Torre_Objeto : MonoBehaviour
         bonusDeVelocidade += bonus;
     }
 
-    public Evolucao GetEvolucao(int index)
-    {
-        evolucoesIniciais[index].SetarTorreAEvoluir(this);
-        return evolucoesIniciais[index];
-    }
-    
-    public int GetQuantidadeDeEvolucoes()
-    {
-        return evolucoesIniciais.Count;
-    }
-
-    public void EvoluirEMudarDeLevel()
-    {
-        for (int i = 0; i < evolucoesIniciais.Count; i++)
-        {
-            Evolucao ev = evolucoesIniciais[i];
-            evolucoesIniciais.Add(ev.GetEvolucao());
-            evolucoesIniciais.Remove(ev);
-        }
-
-        EvolucaoAdicionada?.Invoke(this);
-    }
-
-    public void AdicionarEvolucao(Evolucao evolucao)
-    {
-        evolucoesIniciais.Add(evolucao);
-        EvolucaoAdicionada?.Invoke(this);
-    }
-
-    public void RetirarEvolucao(Evolucao evolucao)
-    {
-        evolucoesIniciais.Remove(evolucao);
-    }
-
-    public void PararAnimacao()
-    {
-        anim.SetBool("Atirando", true);
-        anim.enabled = false;
-    }
-
-    public void VoltarAnimacao()
-    {
-        anim.enabled = true;
-        anim.SetBool("Atirando", false);
-    }
-
     public Transform GetCabeca()
     {
         return Rotacao;
     }
-
-
 }
