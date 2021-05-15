@@ -20,6 +20,7 @@ public class C_Camera : MonoBehaviour
         if(CameraMain != null)
         {
             Main = CameraMain.GetComponent<CinemachineVirtualCamera>();
+            if (Main == null) return;
             Noise = Main.GetCinemachineComponent<CinemachineBasicMultiChannelPerlin>();
 
         }
@@ -33,6 +34,8 @@ public class C_Camera : MonoBehaviour
 
     IEnumerator AddNoise(float Forca, float tempo)
     {
+        if (Noise == null) yield break;
+
         Noise.m_AmplitudeGain += Forca;
         yield return new WaitForSeconds(tempo);
         Noise.m_AmplitudeGain -= Forca;

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CoelhoChefe
   m_EditorClassIdentifier: 
   velocidade: 2
-  vidaTotal: 100
+  vidaTotal: 150
   dano: 20
-  dinheiroGanho: 30
+  dinheiroGanho: 15
   inimigo: {fileID: 4330871579148360054, guid: 6e2972c5271c33d4e9f00fac281f5723, type: 3}

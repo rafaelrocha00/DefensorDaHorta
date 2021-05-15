@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: UFO
   m_EditorClassIdentifier: 
   velocidade: 2.2
-  vidaTotal: 40
+  vidaTotal: 60
   dano: 5
   dinheiroGanho: 10
   inimigo: {fileID: 2181195098893648783, guid: 0cb933d0c8093664b980ba22a8f59a48, type: 3}

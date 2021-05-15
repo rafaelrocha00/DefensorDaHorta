@@ -15,5 +15,5 @@ MonoBehaviour:
   velocidade: 0.8
   vidaTotal: 60
   dano: 10
-  dinheiroGanho: 100
+  dinheiroGanho: 30
   inimigo: {fileID: 5377031787792120355, guid: fae70de119d103d45aea65317185cd09, type: 3}

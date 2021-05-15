@@ -13,7 +13,7 @@ public class BotaoTorre : MonoBehaviour, IPointerEnterHandler
 
     void Start()
     {
-        gui = GameObject.Find("Fase").GetComponent<GUI_Wave>();
+        gui = GameObject.FindGameObjectWithTag("Fase").GetComponent<GUI_Wave>();
         Botao = GetComponent<Button>();
         Botao.onClick.AddListener(ConstruirTorre);
         C_Fase.instancia.DinheiroMudou += AtualizarTorre;

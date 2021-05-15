@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FormigaAzul
   m_EditorClassIdentifier: 
   velocidade: 1.4
-  vidaTotal: 20
+  vidaTotal: 10
   dano: 5
   dinheiroGanho: 10
   inimigo: {fileID: 9090165667262474867, guid: d216c1642421208408b084a3d243a3d2, type: 3}

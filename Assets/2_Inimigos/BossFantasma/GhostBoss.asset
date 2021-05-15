@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GhostBoss
   m_EditorClassIdentifier: 
   velocidade: 1
-  vidaTotal: 700
+  vidaTotal: 1000
   dano: 19
   dinheiroGanho: 500
   inimigo: {fileID: 6612513664349302859, guid: c435b8c049a0d9b4ba7a8c62d0595b5f, type: 3}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Coelho
   m_EditorClassIdentifier: 
   velocidade: 2.5
-  vidaTotal: 20
+  vidaTotal: 100
   dano: 10
-  dinheiroGanho: 15
+  dinheiroGanho: 10
   inimigo: {fileID: 4330871579148360054, guid: 0d39b8db4c34b37428ccfad7f13b074b, type: 3}

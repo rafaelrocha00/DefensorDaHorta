@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Slime 1
   m_EditorClassIdentifier: 
   velocidade: 1.5
-  vidaTotal: 500
-  dano: 20
+  vidaTotal: 450
+  dano: 19
   dinheiroGanho: 50
   inimigo: {fileID: 7542070964693303310, guid: f0f3f021514fd8740baa52c8ab6781ad, type: 3}

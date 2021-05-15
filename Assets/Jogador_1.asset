@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   torres: []
   dialogosJaVistos: 00000000010000000200000003000000
-  FasesLiberadas: 4
+  FasesLiberadas: 8
   dificuldadeEscolhida: 0

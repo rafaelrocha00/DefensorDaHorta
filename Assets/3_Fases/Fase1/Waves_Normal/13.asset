@@ -14,18 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ListaDeInimigos:
   - inimigo: {fileID: 11400000, guid: 408074b861eaf014f98642049e6dbd58, type: 2}
-    tempo: 4
+    tempo: 1
   - inimigo: {fileID: 11400000, guid: 408074b861eaf014f98642049e6dbd58, type: 2}
-    tempo: 4
+    tempo: 1
   - inimigo: {fileID: 11400000, guid: 408074b861eaf014f98642049e6dbd58, type: 2}
-    tempo: 4
+    tempo: 1
   - inimigo: {fileID: 11400000, guid: 408074b861eaf014f98642049e6dbd58, type: 2}
-    tempo: 4
+    tempo: 1
   - inimigo: {fileID: 11400000, guid: 408074b861eaf014f98642049e6dbd58, type: 2}
-    tempo: 4
+    tempo: 1
   - inimigo: {fileID: 11400000, guid: 408074b861eaf014f98642049e6dbd58, type: 2}
-    tempo: 4
+    tempo: 1
   - inimigo: {fileID: 11400000, guid: 408074b861eaf014f98642049e6dbd58, type: 2}
-    tempo: 4
+    tempo: 1
   - inimigo: {fileID: 11400000, guid: 408074b861eaf014f98642049e6dbd58, type: 2}
-    tempo: 4
+    tempo: 1

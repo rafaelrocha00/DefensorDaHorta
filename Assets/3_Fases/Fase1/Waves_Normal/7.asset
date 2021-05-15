@@ -14,4 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ListaDeInimigos:
   - inimigo: {fileID: 11400000, guid: 105eb893e5fe8e747adea3ae659e662a, type: 2}
+    tempo: 2
+  - inimigo: {fileID: 11400000, guid: 105eb893e5fe8e747adea3ae659e662a, type: 2}
+    tempo: 2
+  - inimigo: {fileID: 11400000, guid: 105eb893e5fe8e747adea3ae659e662a, type: 2}
+    tempo: 2
+  - inimigo: {fileID: 11400000, guid: 105eb893e5fe8e747adea3ae659e662a, type: 2}
     tempo: 15
